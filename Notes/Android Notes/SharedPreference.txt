@@ -1,0 +1,13 @@
+Shared Preference(sh) in android
+>> create a project in which you want to 
+>> apply the shared preference 
+>> then, we going to implementing the shared preference
+>> 
+>> create sharedPreference object as always like this
+>> ('SharedPreferences obj_name =getSharedPreferences('name:string',int flag of sharedprences)
+>> then,create an sh.editor object like(SharedPreferences.Editor obj_name = sh_obj.edit());)
+>> then call putString(key,value); for storing the data by a key in sh
+>> for retriving the data from sh
+>> create sh obj same as above with that file name in which you want to retrive the data
+>> then call the getShared.getString(key:string,defaultvalue:anytype);
+>> that it for now....

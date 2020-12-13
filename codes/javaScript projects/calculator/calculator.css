@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    background: linear-gradient(0deg,rgb(123, 218, 255),red);
+}
+
+.container{
+    width: 300px;
+    height: 500px;
+    background-color: rgb(40, 40, 39);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px 400px;
+    padding: 10px;
+    grid-gap: 20px;
+    
+} 
+
+.ripple{
+    position: absolute;
+    border-radius: 50%; 
+    background: white;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width:0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100%{
+        width:200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+/* 24 buttons i need */
+.numpad{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-gap: 5px 4px;
+    overflow: hidden;
+} 
+
+.numpad .button{
+    display: inline-block;
+    position: relative;
+    background: rgb(61, 184, 255);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer; 
+    overflow: hidden;
+}
+.numpad .button:nth-child(17){
+    border-bottom-left-radius: 10px;
+}
+.numpad .button:nth-child(20){
+    border-bottom-right-radius: 10px;
+}
+.container input{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-align: right;
+    cursor: default;
+    font-size: 30px;
+}

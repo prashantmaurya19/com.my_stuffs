@@ -1,0 +1,63 @@
+>>NOTE: splaying after every operation
+
+>>it is invented in 1985
+>>this is roughly blanced tree
+>>it self-adjusted BST
+>>Splaying means to make node to root node which is involed in any operation search,insertion, deletion
+>>splaying in searching operation
+>>rotations : 
+	>1.zig rotaions:
+		>case 1 :search item is root node
+		>case 2 :search item is child of root node
+			>left child :  zig right rotation
+			>right child : zig left rotation
+	>2.zag rotaions : 
+		>case 1 :search item is root node
+		>case 2 :search item is child of root node
+			>left child :  zag right rotation
+			>right child : zag left rotation
+
+	>3.zig-zig rotations/zag-zag rotations :
+		>case 1 : item in left side of tree then use = zig-zig left rotations / zag-zag right rotations 
+		>case 2 : item in left side of tree then use = zig-zig right rotations / zag-zag left rotations 
+	>4.zig-zag rotations / zag -zig rotations :
+		>>its use when the item is in child's right or child's left respectively
+
+>>Advantages of splay tree
+no extra information stored
+fastest type of bst for many prasctical applications
+easy implementation
+better performance because frequentally accessed nodes will move near to root
+>>time complexity O(logN) or in rare O(N) 
+######################################################################
+
+insertion in splay tree
+>>perform bst insertion
+>>aftre that perform splaying
+>>eg :- 
+
+######################################################################
+
+Deletion in splay tree
+>>perform bst deletion
+>>then splay the tree
+>>NOTE: if the delete a leaf node then its parent will become the root of tree
+
+######################################################################
+
+deletion in splay tree -----> top-down approch
+>>in it we splay tree first with respect to that node which we want to delete 
+>>then we delete the root node
+>>after delete the root node we perform join operation
+>>join operation :
+	>perform splay to respect to right most node
+	>then join the left subtree at the right side of newly become root node
+
+
+
+
+
+
+
+
+

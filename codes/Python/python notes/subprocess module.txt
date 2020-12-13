@@ -1,0 +1,13 @@
+subprocess module in python
+
+>> subprocess.run('string command',shell=True,check=True,text=True,capture_output=False)
+
+>> string comman is your basic cmd command
+
+>> shell = true ,enables the cmd
+
+>> text=true ,decode the captured_output to text
+
+>> capture_output = true , it captures the output of cmd after run the command
+
+>>

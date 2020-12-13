@@ -1,0 +1,7 @@
+>>types of traversal in tree
+>1. Inorder :- left root right
+>2. preorder :- root left right
+>3. postorder :- left right root
+
+
+

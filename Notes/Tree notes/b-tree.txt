@@ -1,0 +1,28 @@
+>>Properties of b-tree
+
+>>balanced m(order)-way tree
+>>generalization of bst in which a node can have more than one key abd more than 2 children
+>>maintains sorted data
+>>all leaf node must be at a same level 
+>>b-tree of order m has following properties
+	>>every node has max m children
+	>>min children :- leaf -> 0 , root -> 2 , internal nodes -> m/2(floar value)
+>>every nodes has max. (m-1)keys
+>>min keys :- root node -> 1 , all other nodes -> m/2(floar value) -1 
+>>what is key in b tree ?
+>>key means elements or the data part
+
+#####################################################################
+
+>>Insertion in b-tree
+>>in b tree root has two element left or right element
+>>if we complety fill the node for the next element we will splite that node in equal two parts including that non inserted element
+
+#####################################################################
+
+>>Deletion in b tree
+>>case 1 : if the targeted element is in leaf node then simply delete that node/key
+>>case 2 : if 
+
+
+

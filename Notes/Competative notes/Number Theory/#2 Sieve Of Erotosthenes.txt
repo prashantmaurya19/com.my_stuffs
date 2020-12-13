@@ -1,0 +1,15 @@
+Sieve Eratosthenes
+
+>> time complexcity is 0(nlog(logn))
+
+>> create an arr of n 
+
+>> then, make the multiple of ' i ' 
+
+>> then, do this tile you not reach to the end of arr
+
+>> then, print those the element who not maked
+
+>> that it for today bye bye.....
+
+>>

@@ -1,0 +1,21 @@
+Prime Factorization using Sieve
+
+>> create a array of n,and inisialize as prime(value = -1)
+
+>> startcode
+	int arr[num];
+	memset(arr,-1,sizeof(arr))
+	
+	void PrimeFactorize(){
+		for(int i = 2;i<num;i++){
+			if(arr[i]==-1){
+				for(int j = i;i<num;j+=i){
+					if(arr[j]==-1){
+						arr[j] = i;
+						cout<<j<<"  "<<i<<endl;
+					}
+				}
+			}
+		}
+	}
+>>

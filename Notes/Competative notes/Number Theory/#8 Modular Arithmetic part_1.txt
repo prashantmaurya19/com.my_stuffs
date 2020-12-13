@@ -1,0 +1,18 @@
+Modular Arithmetic
+
+>> #define congurent =  (=-)
+
+>> Modular Congruencs:
+	1 >if a =- b (mod N)
+	2 >then a-b =- 0 (mod N)
+	3 >[a-b is divisible by N]
+	4 >
+	5 >if a*b = c
+	6 >then 
+	7 >a(mod N)*b(mod N) =- c(mod N)
+	8 >and N can be any Integer
+	9 >[note :- this also work for addition and subtraction]
+	10 >
+	11 >..
+
+>>

@@ -1,0 +1,4 @@
+>> transfer the images to drawable v 24 and drawable folder
+>> (aditional) create buttons
+>> for setting the opacity there is an attribute name "alpha"
+>> thats it

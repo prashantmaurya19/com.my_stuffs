@@ -1,0 +1,104 @@
+body{
+    /* filter: hue-rotate(120deg); */
+    background:pink; 
+    margin: 0;
+    padding: 0;
+}
+
+.tools{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px; 
+    height: 60px;
+}
+
+.shadows{
+
+    padding-left: 15px;
+    padding-top: 8px;
+    border-color: white;
+    border-radius: 10px;
+    background-color: rgb(229, 226, 226);
+    box-shadow: 10px 10px 15px 1px rgba(255, 0, 0, 0.3),
+    -10px -10px 15px 1px rgb(255, 227, 248),10px 10px 40px 14px rgba(255, 0, 0, 0.3) inset,
+    -10px -10px 40px 14px rgb(255, 227, 248) inset;
+    
+}
+
+.tool{
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: sans-serif;
+    width: max-content;
+    cursor: default;
+    color: white;
+}
+
+#start{
+    background: rgb(255, 37, 37);
+    
+}
+
+#toolbar{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: max-content;
+    grid-gap: 5px 5px;
+    width: 550px;
+    height: 50px;
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(23,20px);
+    grid-template-rows: repeat(23,20px);
+    grid-gap: 2px 2px;
+    border-radius: 5px;
+    width: 510px;
+    height: 510px;
+    box-sizing: border-box;
+    box-shadow : 0 0 10px 1px rgb(255, 0, 106);
+    padding-left: 4px;
+    padding-top: 4px;
+}
+.child{
+    background: rgb(255, 255, 255);
+    box-shadow: -1px -1px 5px 0 rgba(0, 0, 0, 0.459) inset;
+    cursor: default;
+}
+
+
+.hide{
+    background:white;
+}
+
+#pen{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color:rgb(255, 255, 255);
+    transition: linear;
+}
+
+
+#nip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    height: 20px;;
+    width: 20px;
+    background: rgba(0, 0, 0, 0.377);
+}

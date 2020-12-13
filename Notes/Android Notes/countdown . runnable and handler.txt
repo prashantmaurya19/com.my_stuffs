@@ -1,0 +1,14 @@
+countdown timer , runnable and handler
+>> runnable and handler is use to schuledul the taskes
+>> create Handler instance like " Handler h = new Handler()"
+>> create Runnable instance like "LHS = new Runnable () and override run method"
+>> handler.post(run)
+>>
+>> Countdown Startes here
+>> create object like('new CountDownTimer(int ms,int countdowninterval)
+>> {
+>> some auto gerated will appear here
+>> }.start())')
+>> basically two method appear onTick and onFinesh respectively you can implement that those methods
+>> NOTE:- log.d(string tag,string message) :----> this log you message to logcat in android studio
+>> that it for now.....

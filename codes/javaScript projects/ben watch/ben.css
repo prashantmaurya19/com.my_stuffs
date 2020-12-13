@@ -1,0 +1,117 @@
+body{
+    padding : 10px;
+    margin: 10px;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+} 
+
+.watch{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 0;
+    margin-top: 10%;
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    border-top-color: rgb(115, 255, 0) ;
+    border-bottom-color: rgb(115, 255, 0) ;
+    border-left-color: black;
+    border-right-color: black;
+    border-width: 10px;
+    border-style: solid;
+    background-color: rgb(12, 12, 12);
+}
+#container{
+    width: 255px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+}
+
+span:nth-child(1){
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: none;
+    z-index: -1;
+    transform: translate(-90px,0px);
+    box-shadow: -10px 0 50px 15px;
+}
+
+span:nth-child(2){
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    /* background: none; */
+    z-index: -1;
+    transform: translate(90px,0px);
+    box-shadow: 10px 0 50px 30px;
+}
+
+span:nth-child(3){
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: none;
+    z-index: -1;
+    transform: translate(0px,90px) rotate(90deg);
+    box-shadow: 15px 0 50px 10px rgb(115, 255, 0);
+}
+span:nth-child(4){
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: none;
+    z-index: -1;
+    box-shadow: 15px 0 50px 10px rgb(115, 255, 0);
+    transform: translate(0px,-90px) rotate(-90deg);
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background:url('./images/core.png');
+    background-size: 539%;
+    background-position: -9px -5px;
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+    box-shadow: 0 0 11px 2px rgb(115, 255, 0) inset;
+}
+
+#ripple{
+    position: absolute;
+    background: rgb(115, 255, 0);
+    border-radius: 50%;
+    animation: splash 1s linear infinite;
+}
+ 
+@keyframes splash{
+    0%{
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+    80%{
+        width: 400px;
+        height: 400px;
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+

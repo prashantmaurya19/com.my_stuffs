@@ -1,0 +1,18 @@
+>> Sturcture of red black node in cpp
+>> template<class T>
+>> struct node{
+>> Node<T> *left,*right;
+>> T data;
+>> bool color = false;
+>> node(T data){
+>>	 this->data = data;
+	}
+}
+>> 1. if tree is empty create newnode as root node with color black 
+>> 2. if tree is not empty create newnode as leaf node with color red
+>> 3. if parent of newnode is black then exit
+>> 4. if parent of newnode is red , then check the color  of parent's sinling of newnode.
+	>4.1 if color is black or null then do suitable rotation and recolor
+	>4.2 if color is red the recolor and also check if parent's parent of newnode is not root node the recolor it and recheck
+ 
+>> continue....

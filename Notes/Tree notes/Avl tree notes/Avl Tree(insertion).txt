@@ -1,0 +1,9 @@
+Avl tree
+>> it is a Bst
+>> |height of left suntree| - |height of right subtree| = {-1,0,1}
+>> above difference is a balance factor
+>> whenever you insert a element in avl tree you must check the balance factor(bf)
+>> if the balance factor is not in the above set then you need perform rotations accordingly (like bf is 2 then you need two rotation)
+>> while the rotation tree must be a bst tree after rotation
+>> and ther are 4 type of rotation (LL,RR,RL,LR)
+>> thats it, for this lacture

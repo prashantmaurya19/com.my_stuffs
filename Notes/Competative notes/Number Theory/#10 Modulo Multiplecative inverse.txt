@@ -1,0 +1,23 @@
+Modulo Multiplicative Inverse
+
+>> revision :
+	1 >
+	2 >(A+B)%P = ((A%P)+(B%P))%P
+	3 >(A+B)%P = ((A%P)*(B%P))%P
+	4 >..
+
+>> Modulo multiplecative inverse of a number N under modulo P is that number whoes mod with some Integer will give result answer '1' 
+>> let us take an example 
+>> ,suppose we want to find the multiplecative of 5 under 7 
+>> so , the multiplecative inverse is 3
+>> because 5*3 = 15 and 15 % 7  = 1 
+>> so 3 is the Modulo multiplecative Inverse
+
+>> Do all numbers have Modulo inverse :
+	1 >No , 12 has no Modulo inverse under 6
+	2 > 
+>> Condition for Modulo inverse:
+	1 >modulo inverse of N , under modulo P exist 
+	2 >if GCD(N,P) = 1
+	3 >..
+>>

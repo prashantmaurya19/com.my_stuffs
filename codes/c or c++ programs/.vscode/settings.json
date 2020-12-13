@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "utility": "cpp"
+    },
+    "editor.mouseWheelZoom": true
+}

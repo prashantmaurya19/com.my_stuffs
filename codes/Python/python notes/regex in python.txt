@@ -1,0 +1,8 @@
+regular Expression
+>> To use regular Expression first import re like ('import re')
+>> this module has some functions which are:
+>> findall,search,split,sun,finditer
+>> NOTE :- we use raw string for regex link(" r'string' ")
+>> to make regex re.complile(r' regex ') ----> this method return and regex object with a give pattern
+>> then you can use the above methods
+>> findall return the a list of all mathc sequence

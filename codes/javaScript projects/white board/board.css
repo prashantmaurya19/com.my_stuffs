@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent,rgba(1, 133, 89, 0.863));
+    background-repeat: no-repeat;
+}
+
+#newnode{
+    background: cornflowerblue;
+}
+
+.tools{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: max-content;
+    text-align-last: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border-radius: 3px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 75%;
+    background: rgba(61, 59, 59, 0.712);
+    border-radius: 5px;
+    border: 4px rgba(0, 0, 0, 0.384) solid;
+}
+.title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.253);
+}
+
+#deletnode{
+    background: rgba(243, 40, 40, 0.932);
+}
+
+.node{
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+    position: fixed;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 150px;
+    left: 150px; */
+    background: rgba(175, 255, 83, 0.733);
+    border: 5px rgba(0, 0, 0, 0.493) solid;
+}
+
+.hide{
+   display: none;
+}

@@ -1,0 +1,8 @@
+>>In bst the nodes are arranged in a order.
+>>if we insert a node of grater value then that node the it inserted at the right side of that node and vice versa.
+
+>>        Avl tree
+>>the balanced Binary search tree is known as Avl tree
+	>(1.)it is a bst(Binary search tree)
+	>(2.)|height of left subtree| - |height of right subtree| = {-1,0,1}
+>>to make it balance there a two operations is left/right rotate.

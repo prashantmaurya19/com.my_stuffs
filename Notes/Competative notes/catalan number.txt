@@ -1,0 +1,20 @@
+Caratan numbers 
+>> properties :-
+>> c(0) = c(1) = 1
+>> c(2) = c0c1 + c1+c2 = 1*1 + 1*1 = 2
+>> c(3) = c0c2 + c1c1 + c2c0 = 2+1+2 = 5
+>> c(4) = c0c3 + c1c2+ c2c1 + c3c0 = 5 + 2+2+5 = 14
+>> c(n) = c0c(n-1) + ....... + c1c(n-2-1) + .......+ c(n-1)
+>> 
+>>
+ 
+>> Application of Catalan Numbers
+>> Number of possible Binary Search Trees with n keys.
+>> Number of expressions containing n pairs of parentheses which are correctly matched. For n = 3,possible expressions are ((())), ()(()), ()()(), (())(), (()()).
+>> Number of ways a convex polygon of n+2 sides can split into triangles by connecting vertices.
+>> Number of full binary trees (A rooted binary tree is full if every vertex has either two children or no children) with n+1 leaves.
+>> Number of different Unlabeled Binary Trees can be there with n nodes.
+>> The number of paths with 2n steps on a rectangular grid from bottom left, i.e., (n-1, 0) to top right (0, n-1) that do not cross above the main diagonal.
+>> Number of ways to insert n pairs of parentheses in a word of n+1 letters, e.g., for n=2 there are 2 ways: ((ab)c) or (a(bc)). For n=3 there are 5 ways, ((ab)(cd)), (((ab)c)d), ((a(bc))d), (a((bc)d)), (a(b(cd))).
+>> Number of noncrossing partitions of the set {1, …, 2n} in which every block is of size 2. A partition is noncrossing if and only if in its planar diagram, the blocks are disjoint (i.e. don’t cross). For example, below two are crossing and non-crossing partitions of {1, 2, 3, 4, 5, 6, 7, 8, 9}.  The partition {{1, 5, 7},  {2, 3, 8}, {4, 6}, {9}} is crossing and partition {{1, 5, 7}, {2, 3}, {4}, {6}, {8, 9}} is non-crossing.
+>>

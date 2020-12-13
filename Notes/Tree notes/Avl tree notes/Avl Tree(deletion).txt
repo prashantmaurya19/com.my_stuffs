@@ -1,0 +1,13 @@
+Avl Tree Deletion 
+>> Note :- deletion is same as deletion of bst tree
+>> check balance factor after the deletion in tree
+>> if node have no leaf node then delete it simply
+>> if node has child then do following steps :
+>> 	if node has only one child the link that child with his grandparent node
+>> 	
+>> 	if node has two child then do following step:
+>> 		then delete that node and it replace 	with the inorder predicesour or inorder seccucesour of deleting node
+>> 		then after the replacing and deleting check the balance factor and of tree
+>> 		if tree is not balanced than balance it .
+>> 
+>>

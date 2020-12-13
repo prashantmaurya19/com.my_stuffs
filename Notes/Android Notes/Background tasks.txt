@@ -1,0 +1,11 @@
+Performing Background tasks in android
+>> create inner class like (inner class {class_name} extends AsyncTask<String,void,String>)
+>> then override onPreExecute(string ) and doInBackground(string ) and onPostExecute(string) method
+>> 
+>> (additional) how to get users permission
+>> go to AndroidManifest.xml 
+>> add a tag named uses-permission like(<uses-permission android:name="android.permission.INTERNET")
+>> and close that tag
+>> 
+>> 
+>> thats it for now

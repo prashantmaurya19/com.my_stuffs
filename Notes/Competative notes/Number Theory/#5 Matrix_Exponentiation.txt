@@ -1,0 +1,11 @@
+Matrix Exponentiation
+
+>> identity matrix is that square matrix hows digonal elements value is '1' and rest of element has value '0'
+
+>> startcode
+	void matrixPower(mat base,int dim,int n){
+		mat res = identity(N);
+		for(int i = 0;i<=n;i++)
+		res *(marix_Multipletion)=base; 
+	}
+>>  that it ...

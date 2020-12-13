@@ -1,0 +1,13 @@
+>>embedding the media in android
+>>steps
+>>first create a folder res by right click on res folder then go new then select 'android directary' then create folder 
+>>then copy the media to that folder 
+>>then go to activity where you want to play video 
+>>create videoview object 'VideoView video = find.....;'
+>>set the path of video like 'video.setVideoPath("android.resources:// " + getPackageName()+"/" + R.folder_name.video_name)'
+>>then for starting video call start function by VideoView object like 'VideoView.start();'
+
+For adding the controls in the video follow following setps:
+>>create a MediaController object link 'MediaController mc = new MediaController(this); ' 
+>>call the set mediaController function like 'VideoView.setMediaController(new MediaController);'
+>>then set the mediacontoller on that video like 'mc.setAnchorView(new VideoView);'

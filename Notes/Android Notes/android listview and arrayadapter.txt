@@ -1,0 +1,11 @@
+Android Listview and ArrayAdapter
+>> add Listview in xml
+>> In java create a instance or object like(ListView Obj_name=findViewById(R.id.id_name))
+>> create ArrayList like(ArrayList<String> name = new ArrayList<>();)
+>> 	then create ArrayAdapter<String> name = new ArrayAdapter<String>(context: this.android.R.layout.simple_list_item)f,ArrayAdapter name)
+>> 	then connect call setAdapter() method listview to arrayadapter like this(listview_obj.setAdapter(ArrayAdapter name))
+>> if you want to onclick functionality in card in listview then do following steps:
+>> 	call setOnItemClickListener(new AdapterView.onItemClickListener()(some auto genarated code is suggested))
+>> 	then  auto generated code has function the onItemClick 
+>> 	then implement what ever you want 
+>> for now thats it.

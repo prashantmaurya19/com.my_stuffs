@@ -1,0 +1,11 @@
+Inserting document in collection
+
+>> use db_name =  this command switch if the db is present if it not present ,then it wil create the db('database')
+
+>> db.Collection_name.InsertMany([ {} , {} ,{},.....]) = it help to insert many document at ones
+
+>> db.collection_name.findOne({fields}).skip(how many result you want to skip)
+
+>> db.collection_name.find({fields}).limit(no of result).skip() (skip same as above)
+
+>> that it for today....

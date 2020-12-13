@@ -1,0 +1,7 @@
+Node.js core Module 
+>> consider modules to be the same as JavaScript libraries.A set of
+>> function you want to include in your application
+ 
+>> Node.js has a set a built-in modules which you 
+>> can use without any further installation
+>>

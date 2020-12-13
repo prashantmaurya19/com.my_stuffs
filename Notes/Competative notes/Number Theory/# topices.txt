@@ -1,0 +1,24 @@
+Number Theory
+
+>> Topices:
+	>Primality test
+	>Prime Factorization
+	>Sieve of Eratosthenes
+	>Binary Exponentiation
+	>Euclid algorithm for GCD
+	>Goldbach's Conjecture
+	>Finding number of divisors of N
+	>Calculating Binomial Coefficient
+	>Segmented Sieve
+	>Introduction to Module inverse and how to calculate
+	>
+	>part 2:
+	>Linear dioplhatine equation
+	>Extended Euclid algorithm
+	>Matrix Exponentiation
+	>Fibonacci Numbers in O(log n)
+	>Chinese Remainder Theorem
+	>Euler Toitent Function
+	>sum of divisors
+	>Pollard p-1 method
+	>Pollard Rho Algorithm

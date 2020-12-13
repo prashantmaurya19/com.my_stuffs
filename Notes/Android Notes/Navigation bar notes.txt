@@ -1,0 +1,9 @@
+#######Fragment in android #########
+>>it is a subActivity which have there callbacks
+>>if you want to add another item in navbar, then we go to activity main drawer.xml
+>>for editing the menu then go to menu
+
+
+#############################
+NOTE:-  always looks for change some properties
+#############################

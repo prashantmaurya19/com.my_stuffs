@@ -1,0 +1,48 @@
+Prime Factorization
+
+>> ans = {( Prime_num^power )*( Prime_num^power )...so on}
+
+>> void PrimeFact(int N){ // time complexcity : o(n)
+
+>> for(int i = 2;i<=N;i++){
+
+>> 	if(N % i == 0){
+
+>> 		int cnt = 0;
+
+>> 		while(N % i==0){
+			cnt++;N/=i;
+>> 			}
+
+>> 		cout<<i<<" ^ "<<cnt<<endl;
+
+>> 		}
+	
+>> 	}
+
+>> }
+
+>> Optimized Approach
+
+>> for(int i = 2;i*i<=N;i++){  // time comlexcity : O(sqrt(n))
+
+>> 	if(N % i == 0){
+
+>> 		int cnt = 0;
+
+>> 		while(N % i==0){
+			cnt++;N/=i;
+>> 			}
+
+>> 		cout<<i<<" ^ "<<cnt<<endl;
+
+>> 		}
+	
+>> 	}
+
+>> if(N>1)
+>> 	cout<<N<<" ^ "<<1<<endl;
+
+>> }
+
+>>

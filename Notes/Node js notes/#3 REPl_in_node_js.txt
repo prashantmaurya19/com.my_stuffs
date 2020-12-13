@@ -1,0 +1,23 @@
+REPL(Read Eval Print Loop)
+>> the REAL feature of node is very useful in experimenting
+>> with Node.js codes and to debug JavaScript codes
+ 
+>> Read :- reads user's input,pareses the input into JavaScript data-structure
+>> and stores in memory .
+ 
+>> Eval - Takes and evaluates the data-structure
+ 
+>> Print - Print the result
+ 
+>> Loop - Loops the above command until the user presses the ctrl-c twice
+ 
+>> REPL
+>> 1: js Expression
+>> 2: use variables
+>> 3:multiline code / loops
+>> 4:use (_) to get the last result
+>> 5:we can use editor mode
+ 
+>> NOTE :- repl is not big thing it just activate 
+>> when write node in cmd then repl open,the
+>> console like enviroment that is repl

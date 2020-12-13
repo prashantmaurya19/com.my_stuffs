@@ -1,0 +1,38 @@
+>>how to play music in android
+>>steps : 
+>>create buttons like play , pause , stop (optional)
+>>then create create imageview (optional)
+>>create a mediaplayer object like 'MediaPlayer player = MediaPlayer.create(context : this, R.raw.music.mp3)'
+>>for playing,pausing and stoping the music call start(),pause(),stop() respectivly like ' player.start()'
+
+NOTE :- if you stop function then you not able to play the music again ,but this will not happens with pause
+
+>>if you want add seek bar for volume (additional) 
+>>create a audioManager object like "AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);"
+>>then to get max and min volume "audioManager.getStream(Max/Min)Volume(AudioManager.STREAM_MUSIC);"
+>>then create seekbar after get that and for "setMax(int)" for setting max value ,
+>>for setting the current progress call setProgress(int)
+>>for setting onchange event on seekbar
+	>>call setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()="android studio atuo generated code appear")
+	>>they have three method onprogresschanged,onstarttrackingtouch,onstoptracking
+	>>for setting the phone volume audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,progress(the current value in seekbar),0)
+
+>>for controling the play of audio
+>>create seekbar object same as above
+>>then for the getting the max length on audio call player(MediaController object).getDuration();
+>>then set onchange listener in seekbar of length (same as above)
+>>for setting the progress seekbar along with playing music
+	>>new Timer().scheduleAtFixedRate(new TimeTask())
+	>>In run method "seekbar.setProgress(player.getCurrentposition())"
+	>>other two arguments TimerTask() is delay(int) and interval(int)
+
+
+
+
+
+
+
+
+
+
+

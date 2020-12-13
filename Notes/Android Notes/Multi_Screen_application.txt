@@ -1,0 +1,29 @@
+#######creating a multi_screen application
+
+>>an activity provides multiple entry point
+
+>>apps adapt to different devices
+
+>>Intent use for communicating with one component to another component
+
+>>steps to create multi screen app
+1.>create intent object 
+	syntax :- Intent in = new Intent(packageContext: this, activity_name.class);
+2.>create a string key 
+	the best practis is to write the key after the package name;
+3.>then call the putExtra(string,not sure) for 
+	transfering the content;
+4.>the call startActivity(Intent in);
+5.>then create another activity 
+6.>in that activity 
+	1>create a intent object link this "Intent intent = getIntent();" 
+	2>for getting the content call Intent.getStringExtra(activity_name.key_name);
+
+>>additional to (if you want to add an back button on your second activity )
+	1>go to the manifest file 
+	2>find the second activity tag 
+	3>add and atrribut called android:patentActivityName
+	4>give the name of activitiy where you want to back for exaple :".MainActivity"
+	5>that it 
+
+

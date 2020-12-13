@@ -1,0 +1,19 @@
+Modular GCD
+
+>> Approach:-
+
+>> if you need to calculate GCD(x,y) where X is a very  huge number but y is smaller then we would find potential GCD candidates and apply modulo arithmetic to find GCD
+
+>> eg GCD(427498742937874923,90) = ?
+
+>> so, potential Candidates would be divisors of 90 
+>> that is 1,2,3,5,9,10,15,18,30,45,90
+
+>> we can calculate A^n % D [D is a potential candidate of B]
+
+>> (A^N + B^N)%D = 0 [In this expression we can't calculate A^N so , for that we use modular Arithmatic]
+
+>> we can the above expression in this form:
+	1 >(A^N+B^N)%D = (A^N%D + B^N %D)%D 
+
+>>

@@ -1,0 +1,11 @@
+Api("application programming interface") calling in android
+>> volly is an api in android for fetching the xml and json data form server
+>> 
+>> Adding libraries in andriod
+>> copy the implementation "libraries_name" into your gradle script in decription
+>>  and sync the gradle script
+>> 
+>> create an RequestQueue object 'Volly.newRequestQueue(context:this)'
+>> create JsonObjectRequest object = new JsonObjectReuest(Resquest.method.GET,string link,null,new Respone.Listener<JsonObject>()){some auro generated code appear}
+>> that has two method onResponse(JsonObject response) and onErrorResponse()
+>>

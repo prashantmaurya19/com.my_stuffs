@@ -1,0 +1,9 @@
+Types of trees
+1 General tree
+2 Binary tree
+3 Binary search tree
+4 AVL tree
+5 Red-black tree
+6 Splay tree
+7 Treap
+8 B-tree

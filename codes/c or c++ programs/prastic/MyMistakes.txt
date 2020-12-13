@@ -1,0 +1,1 @@
+(1)   if you want to take any no in string then simply cin in string ok!

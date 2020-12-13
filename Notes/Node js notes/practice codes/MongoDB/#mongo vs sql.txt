@@ -1,0 +1,12 @@
+Sql 
+>> RDBMS is a relational database management system and works on relational database
+>> it stores data in form of entity as tables
+>> it uses sql to query database
+ 
+NoSql
+>> it's a non-relational, document-oriented database mangement system and works an document-based database
+>> mongoDB stores data in form document
+>> table = collection ,row = Document , column = Fields in MongoDB 
+>> MongoDB uses BSON
+>> MongoDB delivers Nosql Flexibilty and Scalability to devlopers
+>>

@@ -1,0 +1,17 @@
+Finding nth Fibonacci 
+
+>> [F1			F2] X	 [P			Q] = [F2 			F3]
+>> 				    [R			 S]
+
+>> In the above equation the sencond term is the tramsiation metrix and the value of the P, Q, R, S is given below: 
+
+>> F1*P+F2*R = F2							P = 0		R = 1
+
+>> F1*Q+F2*S = F3							Q = 1 		S = 1 
+
+>> [F1			F2] X	 [0			 1](n-1) = [Fn 			Fn+1]
+>> 				    [1			 1]
+
+>> then return Fn ,the nth term
+
+>> that it.

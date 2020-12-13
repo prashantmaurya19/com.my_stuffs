@@ -1,0 +1,36 @@
+########### NOTE :- we can not delete middle nodes we can delete leaf nodes , we can only replace the middle nodes 
+>> we have two method to delete nodes in red black tree 
+>1. inorder Predecessor  
+>2. inorder successor
+
+>>>steps to delete nodes 
+>>step 1 : perform bst deletion
+>>step 2 
+: case a :- if node to be deleted is red just delete it
+
+: case b :- if root is db(double black) ,just remove db
+
+: case c :- if db's sibling is black , is both its children are black 
+:: if case 3 occure then, 
+>>for remove db
+>1 add black to irs parent
+>>1.1 if parent is red it becomes black
+>>1.2 if parent is black it becomes double black 
+>2 make sibling red
+>3 if still db exites , apply other cases
+
+: case 4 :- if db'sibling is red 
+>1 swap colors of parent and its sibling 
+>2 rotate parent in db dirtection
+>3 reapply cases
+
+: case 5 :- db's is black , sibling's childeren is far from db is black ,but near child to db is red
+>1 swap color of db's sibling and siblings child who is near to db
+>2 rotate sibling in opposite direction to db 
+>3 apply case 6
+
+: case 6 db:s sibling is black , far child is red
+>1 swap color of parent in db's derection
+>2 remoce db 
+>3 change color of red child to black
+ 

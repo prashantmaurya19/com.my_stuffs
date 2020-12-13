@@ -1,0 +1,9 @@
+red black tree
+>> it is a self-blancing binary search tree
+>> every node is either black or red 
+>> root is always black
+>> Every leaf which is nil is black 
+>> if node is red then pts children are black
+>> Every path from a node to any of its descendent nil node has same no black nodes
+>> avl tree is also red black tree
+>> that is for this notes.
