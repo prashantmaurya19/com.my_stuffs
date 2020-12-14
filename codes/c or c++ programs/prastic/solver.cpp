@@ -31,26 +31,29 @@ int gcd(int a, int b);
 void testcase();
 void sort_string_by_bb(string[],int);
 
-
+// #define fo(n,i) for(int i = 0;i<n;i++)
+// #define ro(k,n,i) for(int i = k;i>=n;i--)
+// #define Fo(k,n,j) for(int j = k;j<=n;j++)
 void solve(){
   int t;
   cin>>t;
   while(t--){
-    int n,total = 0;
-    cin>>n;
-    int ans = 0;
-    Fo(0,n,i){
-      ans++;
-      total += i;
-      if(total>=n){
-        while(total!=n){
-          ans++;
-          total--;
-        }
-        break;
+    int n,type;
+    cin>>n>>type;
+    d(n/26);
+    fo(type,i){
+      cout<<'a';
+    }
+    if(n-type==1){
+      cout<<'b'<<endl;
+      continue;
+    }
+    fo(n/26,j){
+      ro(2,0,i){
+        cout<<(char)(97+i);
       }
     }
-    cout<<ans<<endl;
+    cout<<endl;
   }
 }
 
@@ -59,8 +62,6 @@ void solve(){
 int main(){
   ifstream fil("testCases.txt");
   auto cinbuf = std::cin.rdbuf(fil.rdbuf());
-  // streambuf *cinbuf = cin.rdbuf();
-  // cin.rdbuf(fil.rdbuf());
   solve();
   cin.rdbuf(cinbuf);
   fil.close();

@@ -1,0 +1,9 @@
+update operation in mongoDB
+
+>> db.collection_name.updataOne(<filter>,{ $set:{	filed: new value })
+
+>> db.collection_name.updateMany(<filter>,<update>)
+
+>> NOTE :- use update as given below
+
+>> NOTE :- <update> : 	> {$set : { active:false }}

@@ -1,9 +1,0 @@
-deletion in mongoDb
-
->> db.Collection_name.deleteMany(<filter>)
->> For deleting whole collection then,
-
->> db.Collection_name.deleteMany({}) that it
-
->> nice good night.......
->>

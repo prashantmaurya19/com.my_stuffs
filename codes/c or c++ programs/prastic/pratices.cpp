@@ -37,7 +37,7 @@ void PrimeFactorize(int);
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 void solve(){
-	
+	cout<<(char)97<<endl;
 }
 
 int main(){
