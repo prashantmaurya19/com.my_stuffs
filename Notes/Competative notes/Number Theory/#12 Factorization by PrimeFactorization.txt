@@ -1,0 +1,36 @@
+Total Divisors
+
+>> find total of divisors from prime factotization of a number N
+
+>> Example :
+	1 >N = 300;
+	2 >N = 2x2x3x5x5;
+	3 >Total divisors = 18
+	4 >..
+
+>> Motivation for this problem:
+	1 >Given a Nunber's prime Factorization. find total number of divisor and print it modulo 10^9+7
+
+>> Problem Approch:
+	1 >prime factorize the number and 
+	2 >take the power of prime factors after adding 1 into it and 
+	3 >multiply them all,
+	5 >eg Total divisors = (2+1)*(1+1)*(2+1)
+	6 >..
+
+>> Why above Approch works:
+	1 >so let we create a array which has powers of all prime factors in which just subtract 1 from all and write them like fellow
+	2 >like this : [1,0,2] [refered by above eg]
+	3 >so i create a diviser form it then 
+	4 >d = 1 * 1 * 25 will divide the 300
+	5 >how d  comes ooh it really easy
+	6 >you can take 2 atmost 2 time and 3 atmost 1 time and 5 atmost 2 times
+	7 >if you don't select a factor then take 1 in that place
+	8 >you can take less times the factors
+	9 >so again create d = 4 * 3 * 5 = 60 will divide the 300 
+	10 >..
+
+>> 
+
+
+>>

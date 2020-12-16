@@ -1,44 +1,25 @@
 body{
-    margin: 10px;
+    height: 663px;
     display: flex;
     justify-content: center;
-    padding: 0;
+    align-items: center;
+    background:linear-gradient(45deg,white,red);
 }
 
 .container{
-    height: 100px;
-    width: 100px;
-    background: black;
+    width: 500px;
+    height: 10px;
+    background: linear-gradient(90deg,red 60%,black);
+    background-size: 1000px;
+    animation: animate 5s linear infinite;
 }
-span:nth-child(1){
-    height: 100px;
-    width: 10px;
-    position: absolute;
-    background: coral;
-    box-shadow: -20px 0 20px 10px red;
-}
-span:nth-child(2){
-    height: 100px;
-    width: 10px;
-    position: absolute;
-    background: coral;
-    transform: translate(90px,0);
-    box-shadow: 20px 0 20px 10px blueviolet;
-}
-span:nth-child(3){
-    height: 100px;
-    width: 10px;
-    position: absolute;
-    background: coral;
-    transform: translate(45px,45px) rotate(90deg);
-    box-shadow: 20px 0 20px 10px sienna;
-}
-span:nth-child(4){
-    height: 100px;
-    width: 10px;
-    position: absolute;
-    background: coral;
-    transform: translate(45px,-45px) rotate(90deg);
-    box-shadow: -20px 0 20px 10px sienna;
+
+@keyframes animate{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: var(--i);
+    }
 }
 

@@ -32,12 +32,14 @@ int gcd(int a, int b);
 void testcase();
 int power(int a,int b);
 void PrimeFactorize(int);
+void Factorize(int);
+void Factorial(int);
 // void setTextSize();
 // #define fo(n,i) for(int i = 0;i<n;i++)
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 void solve(){
-	cout<<(char)97<<endl;
+	// Factorize(300);
 }
 
 int main(){
@@ -56,6 +58,45 @@ int main(){
 // 	std::wcscpy(cfi.FaseName,L"Arial");
 // 	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE),FALSE,&cfi);
 // }
+
+void Factorial(int num){
+	BigInteger total("1");
+	Fo(1,num,i){
+		BigInteger num(to_string(i));
+		total.multiply(num);
+	}
+	total.printbig();
+}
+
+void Factorize(int num){
+	int number = num;
+	int arr[num+1];
+	bool start = true;
+	int total = 0;
+	memset(arr,-1,sizeof(arr));
+	for(int i = 2;i<=num;i++){
+		if(arr[i]==-1){
+				for(int j = i;j<=num;j+=i){
+					if(arr[j]==-1){
+						arr[j] = i;
+				}
+			}
+			while(number%i==0){
+				number/=i;
+				if(start){
+					cout<<i;
+					total+=i;
+					start =false;
+				}else{
+					cout<<" X "<<i;
+					total+=i;
+				}
+			}
+		}
+	}
+	cout<<" = "<<num<<endl;
+	cout<<total<<endl;
+}
 
 void PrimeFactorize(int num){
 	int arr[num+1];

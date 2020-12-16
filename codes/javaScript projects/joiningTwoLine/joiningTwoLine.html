@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Two Line</title>
+    <style id = "st">
+
+    </style>
+    <link rel="stylesheet" href="./joiningTwoLine.css">
+
+</head>
+<body>
+    <div class="canvas">
+        <span class="point"></span>
+        <span id="head"></span>
+        <span class="point"></span>
+        <span class="point"></span>
+        <span class="point"></span>
+        <span class="point"></span>
+    </div>
+</body>
+<script src="./joiningTwoLine.js"></script>
+<script>
+    let a = document.querySelectorAll(".point");
+    let f = new Array();
+    a.forEach((Element)=>{
+        f.push(Element);
+    })
+    console.log(f)
+    let n = new MergeElements(document.getElementById("head"),f,{
+        color:"white",
+        width:"10px",
+        animation:true
+    });
+</script>
+</html>
