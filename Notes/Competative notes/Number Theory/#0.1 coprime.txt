@@ -1,0 +1,3 @@
+Coprime
+
+>> coprime are those numbers who don't share any prime divisor

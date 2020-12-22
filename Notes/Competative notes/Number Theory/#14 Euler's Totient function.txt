@@ -1,0 +1,39 @@
+Euler's Totient Function
+
+>> abbes :
+	1 >0! = fyi
+
+>> Euler Totient function (ETF) counts the number of positive integers upto n which are co-prime to n.
+
+>> 0!(n) = # of positive integers Coprime to n
+
+>> 0!(5) = 4 
+>> 0!(10) = 4
+
+>> startcode
+	//Novice  Approach to solve ETF
+	int Phi(int n){
+		int total = 0;
+		for(int i = 0;i<=n;i++){
+			if (GCD(i,n)==1){
+				total++;
+			}
+		}
+		return total;
+	}
+	time Complexcity = O(n*log(n))
+
+>> NOTE :
+	1 >Phi(n) and n is prime then it total no. of coprimes are n-1
+	2 >if we want to find P^x and P is 2 then :
+		1 >total no. of coprimes are P^n/2
+		2 >..
+	3 >
+	4 >0!(P^x) = P^x - No. of integers not coprime with P:
+		1 >No. of integers not coprime with P is (P^x/P)
+		2 >because ,the GCD of multiples of P with is atleast P so they can never be coprime of P
+		3 >simplfy the Above statement
+		4 >we get , P^x-1(P-1)  
+	5 >
+	6 >..
+>>

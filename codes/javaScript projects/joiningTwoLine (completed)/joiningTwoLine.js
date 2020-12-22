@@ -9,6 +9,14 @@ class mergeTwoElement{
         this.midPoint = document.createElement("span");
         this.midPoint.setAttribute("class","midpoint");
         document.querySelector("body").appendChild(this.midPoint);
+        this.setMidCoor(element1);
+        this.setMidCoor(element2);
+        this.joinElement();
+    }
+
+    setMidCoor(element){
+        element.coorx = element.offsetLeft + (element.offsetWidth/2);
+        element.coory = element.offsetTop + (element.offsetHeight/2);
     }
 
     setColor(color){
@@ -44,6 +52,34 @@ class mergeTwoElement{
             this.midPoint.style.transform = `rotate(${this.angle}deg)`;
         }
     }
+
+    removeElements(element){
+        delete element.coorx;
+        delete element.coory;
+        delete element.X;
+        delete element.Y;
+        delete element.width;
+        delete element.height;
+        delete element.preClass;
+        element.setAttribute('draggable','false');
+        this.midPoint.remove();
+        try {
+            if(element==this.element1){
+                delete this.element2.lines[this.element2.lines.indexOf(this)];
+            }else{
+                delete this.element1.lines[this.element1.lines.indexOf(this)];
+            }
+        } catch (error) {
+            console.log(error);
+        }
+        return this;
+    }
+
+    remove(){
+        this.removeElements(this.element1);
+        this.removeElements(this.element2);
+        return this;
+    }
     
 }
 
@@ -55,29 +91,42 @@ class MergeElements{
         "color" : "white",
         animation:false
     }){
-        this.options = option;
-        this.elements = elements;
-        this.attchProperty(head);
-        head.lines = new Array();
-        elements.forEach(element => {
-            element.lines = new Array();
-            this.attchProperty(element);
-            try {
-                this.lines.push(new mergeTwoElement(head,element));
-                
-            } catch (error) {
-                this.lines = new Array(new mergeTwoElement(head,element));
-            }
-            try {
-                if(!option.animation){
-                    this.lines[this.lines.length-1].setColor(option.color);
+        if(elements!=null){
+            this.attchProperty(head);
+            head.lines = new Array();
+            this.options = option;
+            this.elements = elements;
+            this.lines = new Array();
+            elements.forEach(element => {
+                element.lines = new Array();
+                this.attchProperty(element);
+                try {
+                    this.lines.push(new mergeTwoElement(head,element));
+                    
+                } catch (error) {
+                    this.lines = new Array(new mergeTwoElement(head,element));
                 }
-                this.lines[this.lines.length-1].setWidth(option.width);
-            } catch (error) {
-                console.log(error);
-            }
-        });
-        this.elements.push(head);
+                try {
+                    if(!option.animation){
+                        this.lines[this.lines.length-1].setColor(option.color);
+                    }
+                    this.lines[this.lines.length-1].setWidth(option.width);
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+            this.elements.push(head);
+        }else if(head!=null){
+            this.attchProperty(head);
+            head.lines = new Array();
+            this.elements = new Array(head);
+            this.lines = new Array();
+            this.options = option;
+        }else{
+            this.elements = new Array();
+            this.lines = new Array();
+            return;
+        }
     }
 
     Current_Point(e){
@@ -112,6 +161,7 @@ class MergeElements{
     }
 
     moveOn(e){
+        e.dataTransfer.setDragImage(this,this.offsetWidth/2,this.offsetHeight/2);
         this.X = e.offsetX;
         this.Y = e.offsetY;
         if(this.width==undefined){
@@ -119,8 +169,8 @@ class MergeElements{
             this.height = this.offsetHeight;
         }
         setTimeout(()=>{
-            e.target.preClass = e.target.className;
-            e.target.className = 'hide';
+         e.target.preClass = e.target.className;
+         e.target.className = 'hide';
         },0)
     }
 
@@ -141,6 +191,37 @@ class MergeElements{
         e.target.style.top = (e.clientY-this.Y)+'px';
     }
 
+    remove(element){
+        element.removeEventListener('dragstart',this.moveOn);
+        element.removeEventListener('dragend',this.moveOff);
+        element.removeEventListener('drag',this.Current_Point);
+        element.lines.forEach((line)=>{
+            line.removeElements(element);
+        });
+        delete element.lines;
+    }
+    completeDelete(element1){
+        element1.lines.forEach((line)=>{
+            delete line.remove();
+        });
+        delete element1.lines;
+    }
+
+    remove(element1,element2){
+        element1.lines.forEach((line)=>{
+            element2.lines.forEach((line2)=>{
+                if(line==line2){
+                    this.check = true;
+                    delete line.remove();
+                    return;
+                }
+            });
+            if(this.check){
+                return;
+            }
+        });
+        delete this.check;
+    }
 }
 
 

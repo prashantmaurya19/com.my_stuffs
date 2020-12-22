@@ -34,13 +34,48 @@ int power(int a,int b);
 void PrimeFactorize(int);
 void Factorize(int);
 void Factorial(int);
+void printPrime(int);
 // void setTextSize();
 // #define fo(n,i) for(int i = 0;i<n;i++)
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
-void solve(){
-	// Factorize(300);
+template<typename T>
+void swapping(T *p1,T *p2){
+	T *temp = p1;
+	p1 = p2;
+	p2 = temp;
 }
+
+string mySort(string num){
+	string s = num;
+	if(s[0]>s[1]){
+		swapping(&s[0],&s[1]);
+	}
+	Fo(2,s.size()-1,i){
+		int mid = i-1/2;
+		di(mid,i);
+		while(mid == (i-1)){
+			if(s[i]>=s[mid]){
+				char carry = s[i];
+				Fo(mid+1,i-1,k){
+					char temp = s[k];
+					s[k] = carry;
+					s[k+1] = s[k];
+				}
+				break;
+			}
+			mid = (mid+i-1)/2;
+		}
+	}
+	return s;
+}
+
+void solve(){
+	string num = "83746";
+	cout<<mySort(num)<<endl;
+}
+
+
 
 int main(){
   solve();
@@ -111,6 +146,21 @@ void PrimeFactorize(int num){
 				}
 			}
 			cout<<endl;
+		}
+	}
+}
+
+void printPrime(int num){
+  int arr[num+1];
+	memset(arr,-1,sizeof(arr));
+	for(int i = 2;i<=num;i++){
+		if(arr[i]==-1){
+			cout<<i<<" ";
+			for(int j = i*2;j<=num;j+=i){
+				if(arr[j]==-1){
+					arr[j] = i;
+				}
+			}
 		}
 	}
 }

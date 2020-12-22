@@ -1,0 +1,40 @@
+Heap in c++
+
+>> heap is a kind of stack 
+
+>> it not has a fixed size
+
+>> 'new' operator is used to allocate memory in heap
+
+>> eg : int *p = new int() :
+	1 >this is not directly store into the heap 
+	2 >it first store in the stack as a pointer ,
+	3 >and that pointer points to the memory location in which the our data is stored 
+	4 >..
+
+>> 'delete' keyword :
+	1 >it is used to delete variable from heap
+	2 >this delete the variable from the heap but,
+	3 >this will only deleted the variable from the heap not from the stack,
+	4 >the pointer in the stack is still present pointing to the deleted value
+	5 > this kind of pointer also know as 'Dangling pointer'
+	6 >eg startcode
+	int *p = new int();
+	*p = 10;
+	
+	delete(p);
+	7 >
+	8 > for good practice : it is nessccary to reuse and to another variable in the heap or remove it from stack
+	9 >for deleting an array :
+		1 >delete []Array_name;
+		2 >
+	10>for delete an variable :
+		1 >variable_name = NULL
+	11>
+	12 >Why we use delete?:
+		1 >because, we don't delete the variable from it cause memory likage problems speicly in server 
+		2 >and other device where the they don't terminate the programs
+		3 >..
+>> 
+
+>>

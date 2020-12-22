@@ -8,7 +8,45 @@
 
     </style>
     <link rel="stylesheet" href="./joiningTwoLine.css">
+    <style>
+body{
+    background: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    height: 667px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.canvas{
+    width: 95%;
+    height: 95%;
+    background-color: rgba(34, 34, 34, 0.295);
+    border-radius: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.781);
+    overflow:hidden;
+}
+
+.point{
+    width:90px;
+    height:60px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10;
+    display: inline-block;
+}
+
+#head{
+    width:60px;
+    height:60px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 11;
+    display: inline-block;
+}
+    </style>
 </head>
 <body>
     <div class="canvas">
@@ -26,8 +64,7 @@
     let f = new Array();
     a.forEach((Element)=>{
         f.push(Element);
-    })
-    console.log(f)
+    });
     let n = new MergeElements(document.getElementById("head"),f,{
         color:"white",
         width:"10px",

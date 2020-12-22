@@ -1,0 +1,9 @@
+Euler's Phi Funciton in O(nlog(logn))
+
+>> Problem :
+	1 >Find efficient way to find Phi(n) from 1 to n,where n<= 10^6
+	2 >Approch : using Sieve :
+		1 >..
+
+
+>>

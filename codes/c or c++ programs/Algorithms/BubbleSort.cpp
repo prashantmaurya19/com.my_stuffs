@@ -19,11 +19,6 @@ void BubbleSort(int n[],int size)
                 swaping(&n[j],&n[j+1]);
                 check = true;
             }
-
-            // if (check)
-            // {
-            //     break;
-            // }
         }
     }
 

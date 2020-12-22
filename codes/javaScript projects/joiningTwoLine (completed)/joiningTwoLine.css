@@ -1,0 +1,30 @@
+.midpoint{
+    background: linear-gradient(90deg,rgb(0, 238, 255) 80%,rgb(255, 0, 0));
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    border-radius: 3px;
+    z-index: 9;
+    /* animation : animate 3s linear infinite; */
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: var(--i);
+    }
+}
+
+.hide{
+    display: none;
+    cursor: default;
+}
+/* 
+e.target.coorx = (e.x-e.target.X)+(e.target.width/2);
+e.target.coory = (e.y-e.target.Y)+(e.target.height/2);
+element1.coorx = element1.offsetLeft + (element1.offsetWidth/2)
+*/
+
+
