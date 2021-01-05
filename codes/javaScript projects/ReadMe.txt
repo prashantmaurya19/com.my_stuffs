@@ -1,5 +1,5 @@
 Javascript projects
 #####################################################
 
->>those folder which is marked by named they are completed
+>>those folder which is marked by completed and other then that or still in progress
 

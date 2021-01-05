@@ -46,33 +46,8 @@ void swapping(T *p1,T *p2){
 	p2 = temp;
 }
 
-string mySort(string num){
-	string s = num;
-	if(s[0]>s[1]){
-		swapping(&s[0],&s[1]);
-	}
-	Fo(2,s.size()-1,i){
-		int mid = i-1/2;
-		di(mid,i);
-		while(mid == (i-1)){
-			if(s[i]>=s[mid]){
-				char carry = s[i];
-				Fo(mid+1,i-1,k){
-					char temp = s[k];
-					s[k] = carry;
-					s[k+1] = s[k];
-				}
-				break;
-			}
-			mid = (mid+i-1)/2;
-		}
-	}
-	return s;
-}
-
 void solve(){
-	string num = "83746";
-	cout<<mySort(num)<<endl;
+
 }
 
 
@@ -199,24 +174,7 @@ int gcd(int a, int b)
         return gcd(a-b, b);
     return gcd(a, b-a);
 }
-
-
-void testcase(){
-  ofstream file("testCases.txt");
-  string data;
-  while(true){
-    getline(cin,data);
-    data += "\n";
-    if(data=="over\n"){
-      break;
-    }
-    file<<data;
-  }
-  file.close();
-}
-
-
- vector<string> split(string str,string regex) {
+vector<string> split(string str,string regex) {
    vector<string> tokens;
 
    string::size_type start = 0;

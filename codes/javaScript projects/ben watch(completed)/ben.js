@@ -2,24 +2,28 @@ const watch = document.getElementById('ben');
 const screen = document.querySelector('#dial');
 const  body = document.querySelector('body');
 const handle = document.querySelector("section");
-const nodes = handle.children;
-let audio = new Audio("./sound/initSound.ogg");
+const rotate = new dragRotate(handle);
+let audio = null;
 let scount = 1;
-let currNumber = 0;
-
-let rotate = new dragRotate(handle);
-
+let setted_alien = 0;
 screen.addEventListener("click",change);
 
 rotate.setDragCallback(cal);
+rotate.setDragEndCallback(ending);
+
+function ending(){
+    setted_alien = 0;
+}
 
 function cal(angle){
     if(screen.className=="Alien_screen"){
-        if(parseInt(angle)%60==0){
+        angle = parseInt(toDegree(angle));
+        if(angle%36==0 && setted_alien!=angle){
             audio = new Audio(`./sound/change${scount}sound.ogg`);
             audio.play();
+            setted_alien = angle;
             setTimeout(() => {
-                next_alien();
+                change_alien_in_screen(setted_alien);
                 scount++;
                 if(scount==7){
                     scount = 1;
@@ -28,44 +32,50 @@ function cal(angle){
         }
     }
 }
-
-function next_alien(){
-    currNumber++;
-    screen.style.background = `url(./images/${currNumber}.jpg) 0% 0% / cover`;
-    if(currNumber==32){
-        currNumber = 0;
+function toDegree(angle){
+    if(angle<0){
+        angle += 360;
     }
+    return Math.abs(angle);
+}
+
+function change_alien_in_screen(angle=0){
+    screen.firstElementChild.style.backgroundImage = `url(./images/img${(angle/36)}.jpg)`;
 }
 
 function change(){
     if(this.className=="screen"){
+        audio = new Audio("./sound/initSound.ogg")
         audio.play();
-        this.className ="Alien_screen";
+        screen.style.animationName = "opening";
+        setTimeout(() => {
+            this.className ="Alien_screen";
+            screen.firstElementChild.style.cssText += "--i:1;";
+            screen.style.animationName = "";
+        }, 590);
         return;
     }else if(this.className=="Alien_screen"){
         this.className = "boom";
         this.style = "";
         audio = new Audio("./sound/transformSound.ogg");
         audio.play();
+        screen.firstElementChild.style.cssText += "--i:0;";
         setTimeout(() => {
             this.className = "Active_Alien_screen";
-            handle.style = "--color:white";
+            handle.style.cssText = `--color:white ; transform:${handle.style.transform};`;
         }, 1376);
     }else if(this.className=="Active_Alien_screen"){
         audio = new Audio("./sound/warningSound.ogg");
         audio.play();
         setTimeout(() => {
             this.className = "Alien_screen_Off";
-            handle.style = "--color:red";
+            handle.style.cssText = `--color:red ; transform:${handle.style.transform};`;
         }, 4736);
     }else if(this.className=="Alien_screen_Off"){
         audio = new Audio("./sound/activeSound.ogg");
         audio.play();
-        handle.style = "--color:greenyellow";
+        handle.style.cssText = `--color:greenyellow ; transform:${handle.style.transform};`;
         this.className ="screen";
     }
 }
-
-
-
 

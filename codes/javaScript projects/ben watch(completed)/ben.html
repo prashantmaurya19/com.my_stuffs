@@ -6,21 +6,25 @@
     <title>Omnitrix</title>
     <link rel="stylesheet" href = "ben.css">
 </head> 
-<body> 
-    <h1 class="h">Ben Watch</h1>
-    <h1 class="hp">Completed</h1>
-    <div id="container">
-        <section class="ready" style="--color:greenyellow">
-            <span class="node" ></span>
-            <span class="node" ></span>
-            <span class="node" ></span>
-            <span class="node" ></span>
-        </section>
-        <div class="watch" id="ben">
-            <div class="screen" id="dial"></div>
-        </div>
-    </div>    
+<body>
+	<div class = "omnitrix">
+	
+		<div id="container">
+			<section id="outer_dial" class="ready" style="--color:greenyellow;">
+				<span class="node" ></span>
+				<span class="node" ></span>
+				<span class="node" ></span>
+				<span class="node" ></span>
+				<section class="watch" id="ben">
+					<section class="screen" id="dial">
+						<canvas id="alien_canvas" style="--i:0;"></canvas>
+					</section>
+				</section>
+			</section>
+		</div> 
+		
+	<div/>
 </body>
-<script src="/UtilityClasses/DragRotate.js"></script> 
+<script src="DragRotate.js"></script> 
 <script src="ben.js"></script> 
 </html>

@@ -1,5 +1,4 @@
 import re
-from tkinter import *
-import tkinter.messagebox as fmsg
-# valid_char = re.compile('[a-zA-Z0-9:;@!#%^&*\.\s]')
-print(re.compile("[a-zA-Z0-9]").match("≡"))
+valid_char = re.compile('[abcd]+')
+# print(valid_char.match("aaaaaaaaaaaaaaaaa").span()[1])
+print("prahant"[0:-1])
