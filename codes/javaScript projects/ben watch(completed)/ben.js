@@ -1,23 +1,28 @@
-const watch = document.getElementById('ben');
+const container = document.querySelectorAll('#container section');
 const screen = document.querySelector('#dial');
 const  body = document.querySelector('body');
 const handle = document.querySelector("section");
 const rotate = new dragRotate(handle);
+// body.style = `$--totalDimension:${container[0].offsetHeight}px`;
+
+body.addEventListener("dragover",(e)=>{
+    e.preventDefault();
+});
+
 let audio = null;
 let scount = 1;
 let setted_alien = 0;
 screen.addEventListener("click",change);
 
-rotate.setDragCallback(cal);
 rotate.setDragEndCallback(ending);
 
 function ending(){
     setted_alien = 0;
 }
 
-function cal(angle){
+rotate.setDragCallback((angle)=>{
     if(screen.className=="Alien_screen"){
-        angle = parseInt(toDegree(angle));
+        angle = parseInt(angle);
         if(angle%36==0 && setted_alien!=angle){
             audio = new Audio(`./sound/change${scount}sound.ogg`);
             audio.play();
@@ -31,13 +36,7 @@ function cal(angle){
             }, parseInt(audio.duration*1000));
         }
     }
-}
-function toDegree(angle){
-    if(angle<0){
-        angle += 360;
-    }
-    return Math.abs(angle);
-}
+});
 
 function change_alien_in_screen(angle=0){
     screen.firstElementChild.style.backgroundImage = `url(./images/img${(angle/36)}.jpg)`;
@@ -45,7 +44,7 @@ function change_alien_in_screen(angle=0){
 
 function change(){
     if(this.className=="screen"){
-        audio = new Audio("./sound/initSound.ogg")
+        audio = new Audio("./sound/initSound.ogg");
         audio.play();
         screen.style.animationName = "opening";
         setTimeout(() => {

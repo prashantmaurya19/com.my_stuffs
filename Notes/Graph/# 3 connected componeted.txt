@@ -1,0 +1,25 @@
+Connected components in Graph
+
+>> what are connected components ?:
+	1 > a connected component is a set/pair of vertices which contain a path between them
+	2 >a single node is itself a connected component
+	3 >
+	4 >In the directed graph :
+		1 >there can be more then 1  connected components
+		2 >connected in this graph is know as strongly connected components
+		3 >..
+	5 >In the undirected graph :
+		0 >
+		1 >there is only connected component
+		2 >connected in this graph is know as weakly connected components
+		3 >
+	6 >
+	7 >..
+
+>> Counting number of connected components:
+	1 >it we use dfs
+	2 >first we start traversal from a node for n node
+	3 >we again call traversal for those nodes how are left in the previous traversal
+	4 > it goes same untill all nodes are visited..
+
+>>

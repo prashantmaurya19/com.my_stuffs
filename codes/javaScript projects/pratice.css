@@ -4,22 +4,23 @@ body{
     justify-content: center;
     align-items: center;
     background:linear-gradient(45deg,white,red);
+    overflow: hidden;
 }
 
 .container{
-    width: 500px;
-    height: 10px;
-    background: linear-gradient(90deg,red 60%,black);
-    background-size: 1000px;
-    animation: animate 5s linear infinite;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(0deg,skyblue,purple);
+    border-radius: 50%;
+    border: 20px solid skyblue;
 }
 
-@keyframes animate{
-    0%{
-        background-position: 0px;
-    }
-    100%{
-        background-position: var(--i);
-    }
-}
+.container::after{
+    content: "";
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height:100px;
 
+}

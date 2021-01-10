@@ -35,29 +35,12 @@ void sort_string_by_bb(string[],int);
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 void solve(){
-  int t;
-  cin>>t;
-  while(t--){
-    int n,type;
-    cin>>n>>type;
-    d(n/26);
-    fo(type,i){
-      cout<<'a';
-    }
-    if(n-type==1){
-      cout<<'b'<<endl;
-      continue;
-    }
-    fo(n/26,j){
-      ro(2,0,i){
-        cout<<(char)(97+i);
-      }
-    }
-    cout<<endl;
+  int num = 12;
+  Fo(1,num/2,p){
+    cout<<"gcd("<<p<<","<<num<<") = "<<gcd(p,num)<<"\t";
+    cout<<"gcd("<<p+(num/2)<<","<<num<<") = "<<gcd(p+(num/2),num)<<endl;
   }
 }
-
-
 
 int main(){
   ifstream fil("testCases.txt");

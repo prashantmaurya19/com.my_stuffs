@@ -1,0 +1,81 @@
+<html>
+   <head>
+      <title>Drag and Drop Example</title>
+		
+      <script type = "text/javascript" src = "/javascript/prototype.js"></script>
+      <script type = "text/javascript" src = "/javascript/scriptaculous.js"></script>
+		
+      <script type = "text/javascript">
+         window.onload = function() {
+
+            // Make all the images draggables from draggables division.
+				
+            $A($('draggables').getElementsByTagName('img')).each( function(item) {
+               new Draggable(item, {revert: true, ghosting: true });
+            });
+
+            Droppables.add( 'droparea', {hoverclass: 'hoverActive', onDrop: moveItem});
+
+            // Set drop area by default  non cleared.
+            $('droparea').cleared = false;
+         }
+			
+         // The target drop area contains a snippet of instructional
+         // text that we want to remove when the first item
+         // is dropped into it.
+
+         function moveItem( draggable,droparea){
+            if (!droparea.cleared) {
+               droparea.innerHTML = '';
+               droparea.cleared = true;
+            }
+
+            draggable.parentNode.removeChild(draggable);
+            droparea.appendChild(draggable);
+         }
+      </script>
+		
+      <style type = "text/css">
+         #draggables {
+            width: 172px;
+            border: 3px ridge blue;
+            float: left;
+            padding: 9px;
+         }
+			
+         #droparea {
+            float: left;
+            margin-left: 16px;
+            width: 172px;
+            border: 3px ridge maroon;
+            text-align: center;
+            font-size: 24px;
+            padding: 9px;
+            float: left;
+         }
+			
+         .hoverActive {
+            background-color: #ffffcc;
+         }
+			
+         #draggables img, #droparea img {
+            margin: 4px;
+            border:1px solid red;
+         }
+      </style>
+   </head>
+
+   <body>	
+      <div id = "draggables">
+         <img src = "./ben watch(completed)/images/0.jpg"/>
+         <img src = "./ben watch(completed)/images/1.jpg"/>
+         <img src = "./ben watch(completed)/images/2.jpg"/>
+         <img src = "./ben watch(completed)/images/3.jpg"/>
+         <img src = "./ben watch(completed)/images/4.jpg"/>
+      </div>
+
+      <div id = "droparea">
+         Drag and Drop Your Images in this area
+      </div>
+   </body>
+</html>

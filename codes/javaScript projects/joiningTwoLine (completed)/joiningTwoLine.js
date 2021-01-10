@@ -91,6 +91,14 @@ class MergeElements{
         "color" : "white",
         animation:false
     }){
+        if(typeof(option)==Object){
+            option = {
+                "width" : "10px",
+                    "color" : "white",
+                    animation:false,
+                ...option
+            }
+        }
         if(elements!=null){
             this.attchProperty(head);
             head.lines = new Array();
@@ -149,15 +157,21 @@ class MergeElements{
     join(element1,element2){
         if(this.elements.includes(element1) && !this.elements.includes(element2)){
             this.attchProperty(element2);
-            element2.lines = new Array();
             this.elements.push(element2);
-            this.lines.push(new mergeTwoElement(element1,element2));
-            this.lines[this.lines.length-1].setWidth(this.options.width);
-            if(this.options.animation){
-                return
-            }
-            this.lines[this.lines.length-1].setColor(this.options.color);
+            element2.lines = new Array();
+            this.addByjoin(element1,element2);
+        }else if(this.elements.includes(element1) && this.elements.includes(element2)){
+            this.addByjoin(element1,element2);
         }
+    }
+
+    addByjoin(element1,element2){
+        this.lines.push(new mergeTwoElement(element1,element2));
+        this.lines[this.lines.length-1].setWidth(this.options.width);
+        if(this.options.animation){
+            return
+        }
+        this.lines[this.lines.length-1].setColor(this.options.color);
     }
 
     moveOn(e){
@@ -174,15 +188,19 @@ class MergeElements{
         },0)
     }
 
-    setColor(line_Number,Color){
+    setColor(Color){
         if(this.options.animation){
             return
         }
-        this.getline(line_Number).setColor(Color);
+        this.lines.forEach((line)=>{
+            line.setColor(Color);
+        });
     }
 
-    setColor(line_Number,width){
-        this.getline(line_Number).setWidth(width);
+    setWidth(width){
+        this.lines.forEach((line)=>{
+            line.setWidth(width);
+        });
     }
 
     moveOff(e){
@@ -207,12 +225,12 @@ class MergeElements{
         delete element1.lines;
     }
 
-    remove(element1,element2){
+    disJoin(element1,element2){
         element1.lines.forEach((line)=>{
             element2.lines.forEach((line2)=>{
                 if(line==line2){
                     this.check = true;
-                    delete line.remove();
+                    delete line.destory();
                     return;
                 }
             });

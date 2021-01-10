@@ -1,0 +1,37 @@
+Cycle detection using DFS
+
+>> Problem statement:
+	1 >find a cycle in a graph
+	2 >if a graph does't contain cycle 
+	3 >then we say there is always a unique path between two random nodes of that graph
+	4 >
+	5 >
+	6 >..
+
+>> Terminologies:
+	1 >parent node
+	2 >back Edge
+	3 >..
+
+>> Implementation:
+	1 >startcode
+	
+	bool dfs(int node , int pair){
+		vis[node] = 1;
+		
+		for(int child :arr[node]){
+			if(vis[child]==0){
+				if(dfs(child , node)==true){
+					return true;
+				}
+			}else if(child != pair){
+				
+				return true;
+			
+			}
+		}
+		return false;
+	}
+	
+	
+>>

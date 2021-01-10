@@ -1,0 +1,22 @@
+Representation of Graph
+
+>>  Adjacency matrix:
+	1 >In it we create a matrix of space N^2
+	2 >then we do entre all the in that matrix
+	3 >eg if there is connection between 1 to 2
+	4 >then entry will like this 'graphArr[1][2] = 1' 
+	5 >we will make all connection by 1
+	6 >
+	7 >Problems with Adjacency matrix method:
+		1 >it take to much space of N^2
+		2 >BFS or DFS traversal is of order O(N^2) which is too slow
+		3 >Adding a new node is not easy
+
+>> Adjacency list:
+	1 >In it we create an arr of linkedList(you can choose any dynamic linear ds except stack and queue)
+	2 >space is twice of edges in graph
+	3 >entry ' i ' to ' j 'preformes like this:
+		1 >'arr[i].push(j)'
+		2 >
+	4 >..
+>>

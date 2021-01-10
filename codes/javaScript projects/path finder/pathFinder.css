@@ -82,23 +82,3 @@ body{
 .hide{
     background:white;
 }
-
-#pen{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    color:rgb(255, 255, 255);
-    transition: linear;
-}
-
-
-#nip{
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    height: 20px;;
-    width: 20px;
-    background: rgba(0, 0, 0, 0.377);
-}

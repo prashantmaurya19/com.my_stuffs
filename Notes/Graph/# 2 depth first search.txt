@@ -1,0 +1,15 @@
+Depth First Search(DFS)
+
+>> it is an level order traversal 
+
+>> In it we start traversal from a node 
+
+>> and mark it vistited
+
+>> and then reversievly traverse node which is connected to that node
+
+>> and mark that node visited
+
+>> this process carry on untile the all nodes are not visited
+
+>>

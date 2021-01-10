@@ -1,0 +1,32 @@
+Bipartite graph 
+
+>> Bipartite graph also know as bigraph special graph such that you can divide the vertex set into 2 disjoin sets such that :
+	1 >each vertex belongs to exactly one of the sets
+	2 >each edge connects vertices of 2 differen sets
+	3 >..
+
+>>  Bipartite graph test:
+	1 >startcode
+
+	//this function check whether this graph is bipartite graph or not
+	bool dfs(int v,int c){
+		//c is color and it neither 0 or 1
+		// these arr decleared in graph class
+		vis[v] = 1; 
+		col[v] = c;		
+		for(int child : arr[v]){
+			if(vis[child] == 0){
+				if(dfs(child,c^1)==false){
+					return false;
+				}
+			}else{
+				if(col[v] == col[child]){
+					return false;
+				}
+			}
+		}
+		return ture;
+	}
+
+	
+>>

@@ -39,14 +39,10 @@ void printPrime(int);
 // #define fo(n,i) for(int i = 0;i<n;i++)
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
-template<typename T>
-void swapping(T *p1,T *p2){
-	T *temp = p1;
-	p1 = p2;
-	p2 = temp;
-}
 
 void solve(){
+
+  
 
 }
 

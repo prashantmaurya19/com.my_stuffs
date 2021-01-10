@@ -9,7 +9,7 @@ let  selected_Element = new Array();
 
 innerboard.children[0].addEventListener("click",editText);
 
-const contoller = new MergeElements(innerboard.children[0],[],option={width:"10px",color:"red",animation:true});
+const contoller = new MergeElements(innerboard.children[0],[],option={width:"20px",animation:true});
 
 board.addEventListener('drop',(e)=>{
     e.preventDefault();

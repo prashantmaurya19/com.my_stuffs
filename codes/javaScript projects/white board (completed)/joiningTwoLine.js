@@ -183,15 +183,19 @@ class MergeElements{
         },0);
     }
 
-    setColor(line_Number,Color){
+    setColor(Color){
         if(this.options.animation){
             return
         }
-        this.getline(line_Number).setColor(Color);
+        this.lines.forEach((line)=>{
+            line.setColor(Color);
+        });
     }
 
-    setColor(line_Number,width){
-        this.getline(line_Number).setWidth(width);
+    setWidth(width){
+        this.lines.forEach((line)=>{
+            line.setWidth(width);
+        });
     }
 
     moveOff(e){

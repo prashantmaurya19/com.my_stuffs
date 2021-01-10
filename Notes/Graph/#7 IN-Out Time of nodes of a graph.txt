@@ -1,0 +1,7 @@
+IN/Out Time of nodes
+
+>> motivation to study it:
+	1 >given 2 nodes ,fing whether one node lies in subtree of other node.
+	2 >..
+
+>>

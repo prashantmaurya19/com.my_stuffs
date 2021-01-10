@@ -1,0 +1,27 @@
+Diameter of Tree
+
+>> it is defined as the longest path between any 2 nodes in the tree
+
+>> how we can calculated it ?:
+	1 >Novice Approach:
+		1 >we would run DFS , n times
+		2 >In each iteration ,we would set ith node as root and find distance of farthest node
+		3 >running time : O(N^2)
+		4 >..
+	2 >Better Approach:
+		1 >we can find diameter is only 2 DFS run
+		2 >
+		3 >take any arbitrary node as root and run dfs from it and find the farthest node , let this node be x
+		4 >
+		5 >run a dfs from node x and find the maximum distance from this node to any other node , this distance is diameter.
+		6 >case 1 (Root on the diameter):
+			1 >let's assume : Farthest Node Y is not one of the end points.
+			2 >
+		7 > case 2 (Root is not on the diameter):
+			1 >ans to by yourself.
+			2 >
+		8 >
+	4 >
+	5 >..
+
+>>

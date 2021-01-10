@@ -1,0 +1,55 @@
+Euler Totient funtion and GCD sum
+
+>> Problem:
+	1 >sum of GCDs of numbers from 1 to N 
+
+>> Brute force solution:
+	1 >startcode
+	
+	//naive approch
+	int result = 0;
+	for (int i = 1; i <= N ; i++){
+		result += gcd(i,n);
+	}
+	return res;
+	
+	//time complexity = O(Q *NlogN)
+	
+>> Important observations:
+	1 >GCD(i,n) = one of the divisors of N
+	2 >instead of running loop from 1 to N ,we can check for each divisor d of N how many numbers i are there with GCD(i,N) = d
+	3 > ..
+
+>> Optimised solution:
+	1 >startcode
+	int N = 0;
+	//takeing N from user
+	cin>>N;
+	
+	int result = 0;
+	
+	for(int i = 1; i*i<=n;i++){
+		if(n % i == 0){
+			//first divisor 
+			int d1 = i;
+			//second divisor
+			int d2 = N/i;
+			//getCount() returns number of int between 1 to N having gcd d with N
+			result += d1 * getCount(d1,N);
+			
+			if(d1 != d2)
+			result += d2 * getCount(d2,N);
+		}
+	}
+	cout<< result <<endl;
+	
+>> How to calculate integers between 1 to N having gcd d with N
+>> startcode
+	int phi[100001]
+	
+	//creating getCount()
+	int getCount(int d,int N){
+		return phi[N/d];
+	}
+	
+>>
