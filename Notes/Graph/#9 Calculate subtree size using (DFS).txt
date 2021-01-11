@@ -1,0 +1,26 @@
+Calculate subtree size using (DFS)
+
+>> Problem statement:
+	1 >Given a tree construct an array subSize[] , where subSize[v] stores the size of subTree rooted at node v
+	2 >
+	3 >..
+
+>> Apptoach to this Problem:
+	1 >first we create two array of ' visited vertexes ' and "subSize" array 
+	2 >(only in cPP and c)then, initialize them with zero
+	3 >startcode
+	
+	int dfs(int node){
+		vis[node] = 1;
+		int curr_size = 1;
+		
+		for(int child : ad[node]){
+			if(vis[child] == 0){
+				
+			}
+		}
+		subSize[node] = curr_size;
+		return curr_size;
+	}
+	
+	4 >
