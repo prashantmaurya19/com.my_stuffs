@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pratice</title>
-    <link rel="stylesheet" href="./pratice.css">
+    <title>DragRotate Element</title>
+    <style type="text/css">
+    	body{
+    		margin: 0;
+    		padding: 0;
+    		height: 100vh;
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    	}
+
+    	.container{
+    		width: 300px;
+    		height: 300px;
+    		background: linear-gradient(45deg,white,pink);
+    		border-radius: 50%;
+    	}
+
+    	.container:after{
+    		content: "";
+    		background: skyblue;
+    		width: 50px;
+    		height: 50px;
+    		position: absolute;
+    		border-radius: 50%;
+    	}
+    </style>
 </head>
 <body>
-    <div class="container">
-    	
-    </div>
+	<div class="container"></div>
 </body>
-<script src="./UtilityClasses/dragRotate.js"></script>
-<script src="./pratice.js"></script>
+	<script type="text/javascript" src="./UtilityClasses/dragRotate.js"></script>
+
+	<script type="text/javascript">
+		let rotate = new dragRotate(document.querySelector(".container"))
+	</script>
 </html>

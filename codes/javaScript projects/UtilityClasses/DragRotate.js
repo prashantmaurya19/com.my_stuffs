@@ -1,5 +1,6 @@
 class dragRotate{
     constructor(element){
+        console.log(element);
         this.element = element;
         element.addEventListener("drag",this.move);
         element.addEventListener("dragstart",this.moveon);

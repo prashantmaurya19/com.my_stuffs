@@ -23,4 +23,6 @@ Calculate subtree size using (DFS)
 		return curr_size;
 	}
 	
-	4 >
+	4 >..
+
+>>
