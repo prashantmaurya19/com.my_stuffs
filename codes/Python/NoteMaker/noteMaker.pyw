@@ -127,8 +127,8 @@ def Tabbing(arrow,n):
 			character = main_textarea.get(f"{index[0]}.{i}", f"{index[0]}.{i + 1}")
 			i += 1
 		else:
+			character = main_textarea.get(f"{index[0]}.{i - 1}",f"{index[0]}.{i}")
 			i -= 1
-			character = main_textarea.get(f"{index[0]}.{i - 1}", f"{index[0]}.{i}")
 	if n is 1:
 		return [f"{index[0]}.{i}",f"{index[0]}.{index[1]}"]
 	elif n is 2:
@@ -188,17 +188,9 @@ def Tab_spacing_shorcut(event):
 	return "break"
 
 def delete_to_space(event):
-	insert = main_textarea.index(INSERT)
-
-	matches = getIndex()
-	start_row=int(matches[1])
-	while start_row is not 0:
-		s = main_textarea.get(f'{matches[0]}.{start_row-1}',f'{matches[0]}.{start_row}')
-		if (not checkChar(s) or start_row is 0):
-			start_row+=1
-			break
-		start_row-=1
-	main_textarea.delete(f'{matches[0]}.{start_row}',insert)
+	delPos = Tabbing("Left",1)
+	main_textarea.delete(delPos[0],INSERT)
+	return "break"
 
 def backspace_shorcuts(event):
 	index = getIndex()
@@ -319,7 +311,7 @@ def Return_shortcuts(event):
 		return
 	line = get_curr_line(index[0],f"{index[0]}.100")
 	if line[-2:]=="..":
-		if setCursorToBack(index[0],line):
+		if setCursorToBack(index[0]):
 			disable_enter = True
 			return "break"
 		else:
@@ -348,7 +340,7 @@ def Return_Rlease_shortcut(event):
 	else:
 		event.widget.insert(INSERT,">> ")
 
-def setCursorToBack(index,line):
+def setCursorToBack(index):
 	index = int(index)+1
 	try:
 		nextLine = len(check_tree_line(get_curr_line(index,f"{index}.100")).group())
