@@ -1,8 +1,5 @@
 const http = require('http')
 
-
-
-
 const server = http.createServer((request,response)=>{
     switch (request.url) {
         case '/':response.end('home page');

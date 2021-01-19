@@ -1,6 +1,5 @@
 class dragRotate{
     constructor(element){
-        console.log(element);
         this.element = element;
         element.addEventListener("drag",this.move);
         element.addEventListener("dragstart",this.moveon);
@@ -22,7 +21,7 @@ class dragRotate{
         this.instance.diff = this.instance.toDegree(this.instance.findAngle(e)-this.instance.angle);
         this.instance.angle = this.instance.findAngle(e);
         this.instance.setAngle();
-        this.instance.DragStartCallback(this.instance.toDegree(this.instance.angle-this.instance-this.diff));
+        this.instance.DragStartCallback(e,this.instance.toDegree(this.instance.angle-this.instance.diff));
         e.dataTransfer.setDragImage(document.createElement("img"),0,0);
     }
     
@@ -48,7 +47,7 @@ class dragRotate{
         if(e.x!=0){
             this.instance.angle = this.instance.findAngle(e);
             this.instance.setAngle();
-            this.instance.DragCallback(this.instance.toDegree(this.instance.angle));
+            this.instance.DragCallback(e,this.instance.toDegree(this.instance.angle));
         }
     }
     
@@ -57,7 +56,7 @@ class dragRotate{
         this.instance.angle = this.instance.findAngle(e);
         this.instance.setAngle();
         this.instance.angle = this.instance.toDegree(this.instance.angle-this.instance.diff);
-        this.instance.DragEndCallback(this.instance.toDegree(this.instance.angle));
+        this.instance.DragEndCallback(e,this.instance.toDegree(this.instance.angle));
     }
     
     setDragCallback(callback = function (){}){
@@ -78,9 +77,5 @@ class dragRotate{
         delete this.element.coory;
         delete this.element.coorx;
         delete this;
-    }
-
-    status(bool = true){
-        this.state = bool;
     }
 }
