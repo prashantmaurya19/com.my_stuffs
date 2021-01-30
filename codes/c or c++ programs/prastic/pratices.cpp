@@ -41,8 +41,10 @@ void printPrime(int);
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 
 void solve(){
-
-  
+  fo(11,i){
+    int bit = (i>>0)&1;
+    cout<<bit<<endl;
+  }
 
 }
 

@@ -1,17 +1,9 @@
 body{
     background: linear-gradient(180deg,rgb(218, 245, 255),white);
-    height: 667px;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     overflow-y: scroll;
-}
-
-h1{
-    text-align: center;
-    color: rgb(0, 225, 255);
-    text-shadow: 3px 1px 4px rgb(2, 120, 255);
-    font-size: 60px;
-    font-family: sans-serif;
-    margin: 10px 10px;
 }
 
 .container{
@@ -22,11 +14,6 @@ h1{
 }
 
 .luncher{
-    
-    /* box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.432),
-    -10px -10px 15px 2px rgb(255, 255, 255),
-    10px 10px 15px 2px rgba(0, 0, 0, 0.13) inset,
-    -10px -10px 15px 2px rgba(255, 255, 255, 0.493) inset; */
     width: 370px;
     background-image: url('./kisspng-beyblade-spinning-tops-television-film-toy-tomy-burst-the-whole-stadium-5af23043e5c2c5.6677302615258215079411.png');
     background-size: 100%;

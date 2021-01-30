@@ -1,18 +1,17 @@
-console.log('this is to do list manager');
 const container = document.querySelector('body');
 const add = document.querySelector('#add');
 const paint = document.querySelector('#text');
-const complete = "complete";
-const notComplete = "notComplete";
-let tasks = document.querySelector('#tasks');
+const tasks = document.querySelector('#tasks');
 let count = localStorage.getItem('number');
-let task_name = "";
 let dones = document.getElementsByClassName('done');
 let deletes = document.getElementsByClassName('delete');
 update();
 function update(){
-    tasks.innerHTML = localStorage.getItem('nodes').trim();
-    tasks.style.gridTemplateRows=`repeat(${count+1},50px)`;
+    try{
+        tasks.innerHTML = localStorage.getItem('nodes').trim();
+    }catch(err){
+        console.log(err);
+    }
 } 
 
 for(let i = 0;i<dones.length;i++){
@@ -45,6 +44,7 @@ add.addEventListener('click',()=>{
         return;
     }else{
         addTask(paint.value);
+        paint.value = "";
     }
 });
 
@@ -52,18 +52,21 @@ add.addEventListener('click',()=>{
 
 function addTask(taskname){
     count++;
-    let card = `
-    <span class="card">
-    <span class="card_element"><p class=${notComplete}>${taskname}</p></span>
-    <a class="card_element done" href="#"></a>
-    <a class="card_element delete"  href="#"></a>
-    </span>
-    `;
-    tasks.innerHTML += card;
+    let c = document.createElement("span");
+    c.className = "card";
+    c.innerHTML = `<span class="card_element"><p class="notComplete">${taskname}</p></span>`
+    let d = document.createElement("a");
+    d.href = "#";
+    d.className = "card_element done";
+    d.addEventListener('click',done);
+    let d1 = document.createElement("a");
+    d1.href = "#";
+    d1.className = "card_element delete";
+    d1.addEventListener('click',deleteNode);
+    c.appendChild(d);
+    c.appendChild(d1);
+    tasks.appendChild(c);
     localStorage.setItem('nodes',tasks.innerHTML.trim());
-    tasks.children[count-1].children[1].addEventListener('click',done);
-    tasks.children[count-1].children[2].addEventListener('click',deleteNode);
-    tasks.style.gridTemplateRows=`repeat(${count},50px)`;
     localStorage.setItem('number',count);
 }
 
@@ -74,9 +77,6 @@ paint.addEventListener('keypress',(e)=>{
         return;
     }
 })
-
-
-
 
 
 

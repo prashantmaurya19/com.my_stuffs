@@ -19,7 +19,7 @@ body{
     height: max-content;
     border-radius: 50%;
     z-index: 11;
-    transform: translate(16%,-116%);
+    transform: translate(16%,-116%); 
 }
 
 .omnitrix{
@@ -53,6 +53,8 @@ body{
     border: 5px solid rgb(51, 51, 51);
 	z-index:20;
 }
+
+
 
 .node:nth-child(1){
     transform: translate(0,calc(var(--node_direction)*-1));

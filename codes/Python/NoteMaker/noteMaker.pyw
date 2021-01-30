@@ -121,14 +121,13 @@ def about():
 def Tabbing(arrow,n):
 	index = getIndex()
 	i = int(index[1])
-	character = "a"
-	while checkChar(character):
-		if arrow == "Right":
-			character = main_textarea.get(f"{index[0]}.{i}", f"{index[0]}.{i + 1}")
-			i += 1
-		else:
-			character = main_textarea.get(f"{index[0]}.{i - 1}",f"{index[0]}.{i}")
-			i -= 1
+	sign = 1
+	if arrow=="Left":
+		sign = -1
+	while True:
+		i += sign
+		if not checkChar(main_textarea.get(f"{index[0]}.{i}", f"{index[0]}.{i + 1}")):
+			break
 	if n is 1:
 		return [f"{index[0]}.{i}",f"{index[0]}.{index[1]}"]
 	elif n is 2:
@@ -411,7 +410,7 @@ def selection_shorcuts(event):
 	del symbol
 
 def Create_file_shortcut(event):
-	global file_name, isopenedfile, disable_enter, issaved
+	global isopenedfile
 	if isopenedfile:
 		Save_file()
 		close_file()
@@ -431,10 +430,7 @@ def create_file():
 		isopenedfile = True
 		issaved = True
 	except Exception as e:
-			isopenedfile = False
-			root.title("Untitled - NoteMaker")
-			file_name = None
-			issaved = False
+		close_file()
 
 def Open_file_shortcut(event):
 	Open_file()
@@ -448,20 +444,14 @@ def Open_file():
 	main_textarea.delete('1.0',END)
 	root.title("Untitled - NoteMaker")
 	try:
-		if file_name is None:
-			with fd.askopenfile(mode='r',filetypes=[('Text Files','*.txt')]) as f:
-				main_textarea.insert(INSERT,f.read())
-				file_name = f.name
-		else:
-			with open(file_name,'r') as f:
-				main_textarea.insert(INSERT,f.read())
+		with fd.askopenfile(mode='r',filetypes=[('Text Files','*.txt')]) as f:
+			main_textarea.insert(INSERT,f.read())
+			file_name = f.name
 		isopenedfile = True
 		root.title(file_name)
 		issaved = True
 	except Exception as e:
-		isopenedfile = False
-		issaved = True
-		file_name = None
+		pass
 
 def change_font():
 	global font_family,font_size,font_style

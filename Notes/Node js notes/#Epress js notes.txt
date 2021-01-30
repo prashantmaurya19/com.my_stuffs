@@ -1,0 +1,7 @@
+Express js
+
+>> make sure you already have package.json in the folder
+
+>> to instal express "npm i express"
+
+>>

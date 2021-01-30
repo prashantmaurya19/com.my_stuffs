@@ -35,39 +35,26 @@ void sort_string_by_bb(string[],int);
 // #define ro(k,n,i) for(int i = k;i>=n;i--)
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 void solve(){
-  int num = 12;
-  Fo(1,num/2,p){
-    cout<<"gcd("<<p<<","<<num<<") = "<<gcd(p,num)<<"\t";
-    cout<<"gcd("<<p+(num/2)<<","<<num<<") = "<<gcd(p+(num/2),num)<<endl;
+  ll t;
+  cin>>t;
+  while (t--) {
+    // ll n;
+    // cin>>n;
+    if(((t>>0)&1)==0){
+      cout<<"NO"<<endl;
+    }else{
+      cout<<"YES"<<endl;
+    }
   }
 }
 
 int main(){
-  ifstream fil("testCases.txt");
-  auto cinbuf = std::cin.rdbuf(fil.rdbuf());
+  // ifstream fil("testCases.txt");
+  // auto cinbuf = std::cin.rdbuf(fil.rdbuf());
   solve();
-  cin.rdbuf(cinbuf);
-  fil.close();
+  // cin.rdbuf(cinbuf);
+  // fil.close();
   return 0;
-}
-
-void sort_string_by_bb(string a[],int n){
-	int size  = n;
-	fo(size,i){
-
-		fo(size,j){
-			if(compare_to(&a[j],(&a[j])+a[j].length(),&a[j+1],(&a[j+1])+a[j+1].length())){
-					string temp = a[j];
-					a[j] = a[j+1];
-					a[j+1] = temp;
-			}
-
-		}
-
-	}
-	for(int i = size-1;i>=0 ;i--){
-		cout<<a[i]<<endl;
-	}
 }
 
 int gcd(int a, int b)

@@ -5,11 +5,14 @@ class dragRotate{
         element.addEventListener("dragstart",this.moveon);
         element.addEventListener("dragend",this.moveOff);
         element.setAttribute("draggable","true");
-        this.diff = 0;
-        this.angle = 0;
-        element.style.transform = "rotate(0deg)";
+        element.addEventListener("touchstart",this.moveon);
+        element.addEventListener("touchmove",this.move);
+        element.addEventListener("touchend",this.moveOff);
         element.coory = element.offsetTop+(element.offsetHeight/2)
         element.coorx = element.offsetLeft+(element.offsetWidth/2)
+        this.diff = 0;
+        this.angle = 0; 
+        element.style.transform = "rotate(0deg)";
         this.element.instance = this;
         this.DragCallback = function (){};
         this.DragStartCallback = function (){};
@@ -21,10 +24,10 @@ class dragRotate{
         this.instance.diff = this.instance.toDegree(this.instance.findAngle(e)-this.instance.angle);
         this.instance.angle = this.instance.findAngle(e);
         this.instance.setAngle();
-        e.dataTransfer.effectAllowed = "copyMove";
         this.instance.DragStartCallback(this.instance.toDegree(this.instance.angle-this.instance-this.diff));
-        e.dataTransfer.setDragImage(new Image(),0,0);
-        
+        if(e.type=="dragstart"){
+            e.dataTransfer.setDragImage(new Image(),0,0);
+        }
     }
     
     toDegree(angle){
@@ -35,9 +38,19 @@ class dragRotate{
     }
 
     findAngle(e){
-        let angle = (Math.atan2(e.y-this.element.coory,e.x-this.element.coorx)*180)/Math.PI;
-        angle = this.toDegree(angle);
-        return angle;
+        // console.log(e.type)
+        if(e.type=="touchend"){
+            return this.angle;
+        }
+        if(e.y==undefined){
+            let angle = (Math.atan2(e.touches[0].pageY-this.element.coory,e.touches[0].pageY-this.element.coorx)*180)/Math.PI;
+            angle = this.toDegree(angle);
+            return angle;
+        }else{
+            let angle = (Math.atan2(e.y-this.element.coory,e.x-this.element.coorx)*180)/Math.PI;
+            angle = this.toDegree(angle);
+            return angle;
+        }
     }
     setAngle(){
         if(this.state){
@@ -51,7 +64,6 @@ class dragRotate{
             this.instance.setAngle();
             this.instance.DragCallback(this.instance.toDegree(this.instance.angle));
         }
-
     }
     
     

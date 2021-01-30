@@ -13,9 +13,12 @@ const skyblue = "rgb(255, 41, 105)";
 const childId = create2dArray(23, 23);
 
 function ripple(e){
+    console.log('clicked');
+    e.preventDefault();
     let id = this.id.split(",");
     let x = parseInt(id[0]);
     let y = parseInt(id[1]);
+    childId[x][y].visited = false;
     // console.log(id);
     fillBoard(x,y);
     deVisite();
@@ -24,7 +27,7 @@ function ripple(e){
 function deVisite(){
     for (let i = 0; i < 23; i++) {
         for (let j = 0; j < 23; j++) {
-            childId[i][j].visited =false;
+            childId[i][j].visited = false;
         }
     }
 }

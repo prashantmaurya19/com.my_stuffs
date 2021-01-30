@@ -1,0 +1,13 @@
+Finding Bridges in Graph
+
+>> Bridges :
+	1 > a bridge is defined as and edge which when removed makes graph disconnected or more precisely it increases the number of connected components.
+
+>> Deapth First Search(DFS) Tree:
+	1 >When we use dfs to travers a graph it form a tree like structure .
+	2 >and some edges can remain to travers that edges calles Back edges
+	3 >every Back edge is connected to node's anciester node
+	4 >Back edges can never be bridges
+	5 >..
+
+>>

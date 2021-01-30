@@ -48,7 +48,6 @@ const server = http.createServer((request,response)=>{
 		"/6f750b9b0d0ed235f2ea07f597f09ef9.jpg":fs.readFileSync("C:/Users/prashant/Downloads/javaScript projects/BeyShop/6f750b9b0d0ed235f2ea07f597f09ef9.jpg"),
 		"/kisspng-digital-art-beyblade-deviantart-fan-art-bay-blade-5b21ec7aa9ca84.7910663715289498826955.png":fs.readFileSync("C:/Users/prashant/Downloads/javaScript projects/BeyShop/kisspng-digital-art-beyblade-deviantart-fan-art-bay-blade-5b21ec7aa9ca84.7910663715289498826955.png"),
 		"/s_l1600_18__22468.1448214507.jpg":fs.readFileSync("C:/Users/prashant/Downloads/javaScript projects/BeyShop/s_l1600_18__22468.1448214507.jpg"),
-		
 	}
     response.end(items[request.url]); //this nuccessary to response for any request to the user
  
