@@ -21,7 +21,6 @@ disable_enter = False # for hendling enter
 tabs_Num = ""
 Line_Num = 0
 hascode = False
-sel_position = ""
 def configure():
 	global font_family,font_size,font_style,file_name
 	try:
@@ -34,6 +33,7 @@ def configure():
 	font_style = confes['font_style']
 	if confes['file'] is not None:
 		file_name = confes['file']
+
 	if confes["wrap"] == 1:
 		wraps.set(1)
 	colors = confes["theme"].split("/")
@@ -485,7 +485,7 @@ def setText_wrap():
 root = Tk()
 root.geometry(f"1000x500+190+100")
 root.title(file_name)
-root.wm_iconbitmap('nmico.ico')
+root.iconbitmap(r".\nmico.ico")
 root.protocol("WM_DELETE_WINDOW", exit_window)
 wraps = IntVar()
 root.title('Untitled - NoteMaker')
@@ -567,7 +567,8 @@ main_textarea.bind('<(>',selection_shorcuts)
 
 
 if file_name is not None:
-	Open_file()
+	with open(file_name) as f:
+		main_textarea.insert(INSERT,f.read())
 setText_wrap()
 root.config(menu=menu)
 root.mainloop()
