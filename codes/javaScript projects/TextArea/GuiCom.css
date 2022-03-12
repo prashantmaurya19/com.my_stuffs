@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(13, 2, 32);
+}
+#maindiv{
+    background-color: rgba(255, 255, 255, 0.096);
+    width: 90%;
+    height: 90%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+}
+
+/* tabpanel classes startes here */
+
+.tabArea{
+    height: 10%;
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+.tab{
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: max-content;
+    height: 100%;
+    margin-right: 0.1%;
+    margin-left: 0.1%;
+    border-radius: 5%;
+    background-color: rgb(20, 20, 20);
+}
+
+.tab .close-btn{
+    width: 3vw;
+    background-color: rgb(0, 183, 255);
+    height: 60%;
+    margin-left: 1%;
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    border-radius: 15%;
+}
+
+.activeTab{
+    border-bottom: 2px solid rgb(42, 74, 255);
+}
+.inactiveTab{
+    border-bottom: 2px solid rgb(32, 32, 32);
+}
+
+.displayFrame{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100% ;
+    height: 90%  ;
+    background: white;
+}
+
+.tab font{
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 3vh;
+    width: 80%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    margin-right: 0.1%;
+}
+
+
+/* frame states acitive inactive frame  */
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+.frame{
+    width: 100%;
+    height: 100%;
+}
+
+/* tabpanel classes endes here */
+
+
+/* titleBar classes startes here */
+.titleBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: .07fr 1fr 1fr 0.3fr;
+    grid-template-rows: 100%;
+}
+
+.title{
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+    font-size: 4.1vh;
+    color: black;
+    background-color: rgb(223, 223, 223);
+}
+
+.appIcon{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74, 255, 83);
+    pointer-events: none;
+}
+
+.controlButtons{
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    background-color: rgb(95, 0, 51);
+}
+
+.minizeButton{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 154, 255);
+
+}
+.maximiseButton{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 255, 187);
+
+}
+.closeButton{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 39, 86);
+
+}
+
+
+/* titleBar classes endes here */
+
+/* menubar classes startes here */
+
+.menubar{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.menu{
+    height: 100%;
+    width: max-content;
+}
+
+.activeMenu{
+
+}
+
+
+.submenu ul{
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu{
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(13%,4%);
+    width: 20vw;
+    height: 60vh;
+    background-color: blue;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.innerSubMenu{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 101%;
+    padding: 0;
+    background-color: red;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    visibility:hidden;
+    opacity: 0;
+    transition: .1s;
+}
+
+
+li:hover .innerSubMenu{
+    visibility:visible;
+    opacity: 1;
+}
+
+li{
+    width: 100%;
+    height: max-content;
+    background-color: #00a0ff;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    pointer-events:all;
+}
+
+span{
+    cursor: default;
+}
+
+li span:nth-child(1){
+    width: 50%;
+    text-align: start;
+    justify-items: flex-start;
+    color: white;
+}
+
+li span:nth-child(2){
+    text-align: end;
+    justify-items: flex-end;
+    width: 50%;
+    text-transform: capitalize;
+    color: yellowgreen;
+}
+
+.menu font{
+    font-size: 100%;
+    pointer-events: none;
+}
+
+
+/* menubar classes endes here */
+
+
+.tree{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(255, 227, 185);
+}
+
+/* filetree classes startes here */
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(45deg,white,red);
+}
+
+*{
+    margin: 0;padding: 0;
+}
+
+.directorTree label{
+    width: 100%;
+    height: 100%;
+}
+
+.directorTree{
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 10vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.directorTree label input{
+    background-color: red;
+    border-radius: 50%;
+}
+
+.directorTree label .ico{
+    width: 10%;
+    position: absolute;
+    height: max-content;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.name{
+    margin-right: 5%;
+}
+
+.directorTree label input[type = "checkbox"]{
+    display: none;
+}
+
+.directorTree label input[type = "checkbox"]:checked ~ .ico{
+    transform: rotate(90deg);
+}
+
+.directorTree label ul{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition-duration: 10s;
+    transition-timing-function: linear;
+}
+
+.directorTree label input[type = "checkbox"]:checked ~ ul{
+    height:max-content;
+}
+
+
+
+
+
+
+/* filetree classes endes here */
+

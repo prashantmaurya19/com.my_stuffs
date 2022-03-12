@@ -11,7 +11,7 @@ int write(T&&... x){
 template<class T>
 class graph{
   private:
-    
+
   public:
     graph(){
       write("graph is created");
@@ -20,7 +20,7 @@ class graph{
 
 
 int main(){
-   graph<string> p;
+   write("prashant",12,23);
 
    return 0;
  }

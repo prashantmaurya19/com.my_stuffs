@@ -1,0 +1,22 @@
+Q.1 ) Write a program to your name n number of times.
+
+code:-  #include<bits/stdc++.h>
+        using namespace std;
+
+        void printNameNTimes(int n){
+          while (n--) {
+            cout<<"prashant maurya"<<endl;
+          }
+        }
+
+        int main() {
+          printNameNTimes(7);
+          return 0;
+        }
+output :- prashant maurya
+          prashant maurya
+          prashant maurya
+          prashant maurya
+          prashant maurya
+          prashant maurya
+          prashant maurya

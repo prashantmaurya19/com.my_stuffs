@@ -1,13 +1,18 @@
 let body = document.querySelector('body');
 // body.style.height = innerHeight+"px";
-console.log('this is included');
 
-for(let i = 1;i<3;i++){
-    setInterval(() => {
+let interval = [];
+
+for(let i = 1;i<2;i++){
+    interval[i] = setInterval(() => {
         let rangeX = Math.floor(Math.random()*(innerWidth));
             let rangeY = Math.floor(Math.random()*(innerHeight));
             createStar(rangeX,rangeY);
-    },500*(i-1));
+    },1000*(i-1));
+}
+
+for(let i =0;i<3;i++){
+    // clearInterval(interval[i]);
 }
 
 
@@ -19,5 +24,5 @@ function createStar(x,y){
     body.appendChild(star);
     setTimeout(()=>{
         body.removeChild(star);
-    },500);
+    },1000);
 }

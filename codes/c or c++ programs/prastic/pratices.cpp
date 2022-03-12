@@ -8,8 +8,8 @@
 // #include<fstream>
 // #include<algorithm>
 #include <bits/stdc++.h>
-#include <windows.h>
 #include "BigInteger.h"
+#include "util.h"
 using namespace std;
 
 #define di(...) debug((#__VA_ARGS__),0,__VA_ARGS__);
@@ -41,10 +41,8 @@ void printPrime(int);
 // #define Fo(k,n,j) for(int j = k;j<=n;j++)
 
 void solve(){
-  fo(11,i){
-    int bit = (i>>0)&1;
-    cout<<bit<<endl;
-  }
+  // int arr[5] = [12,3,4,5,56];
+  cout<<add(1,2)<<endl;
 
 }
 
@@ -73,7 +71,7 @@ void Factorial(int num){
 		BigInteger num(to_string(i));
 		total.multiply(num);
 	}
-	total.printbig();
+	total.print();
 }
 
 void Factorize(int num){

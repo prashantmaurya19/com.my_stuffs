@@ -1,0 +1,158 @@
+Q.6 ) Write a program FOR LINEAR ARRAY OPERATIONS (ANY THREE).
+
+code :- #include<bits/stdc++.h>
+        using namespace std;
+
+        void Insertion_in_Array(){
+            //to showing insertion i taken a int Array as example
+            cout<<"Array before any insertion"<<endl;
+            int arr[9] = {1,2,3,4,5,6,7,8,9};
+            for(int i=0;i<9;i++){
+              cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+            //insertion in back
+            cout<<"\ninsertion in back"<<endl;
+            cout<<"\nEnter data to insert in back : ";
+            int newData;
+            cin>>newData;
+            int newArr[10];
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=0;i<9;i++){
+              newArr[i] = arr[i];
+            }
+            newArr[9] = newData;
+            for(int i=0;i<10;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<endl;
+
+            //insertion in front
+            cout<<"\ninsertion in front"<<endl;
+            //i already decleared newArr and newData above
+            cout<<"\nEnter data to insert in front : ";
+            cin>>newData;
+            newArr[0] = newData;
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=1;i<10;i++){
+              newArr[i] = arr[i-1];
+            }
+            for(int i=0;i<10;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<endl;
+            //insertion in nth position
+            //for this example is am taking 4 as nth position
+            //i already decleared newArr and newData above
+            cout<<"\ninsertion in nth postion (for this example i taken 4 as nth postion)"<<endl;
+            cout<<"\nEnter data to insert in nth position : ";
+            cin>>newData;
+            newArr[4-1] = newData;
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=0;i<10;i++){
+              if(i<4-1){
+                newArr[i] = arr[i];
+              }else if(i>4-1){
+                newArr[i] = arr[i-1];
+              }
+            }
+            for(int i=0;i<10;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<"\n"<<endl;
+        }
+
+        //2.) Deletion Operation in Linear Array
+        void Delection_in_Array(){
+            //to showing delection i taken a int Array as example
+            cout<<"Array before any Deletion"<<endl;
+            int arr[9] = {1,2,3,4,5,6,7,8,9};
+
+            for(int i=0;i<9;i++){
+              cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+            //delection from back
+            cout<<"\ndelection in back"<<endl;
+            int newArr[8];
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=0;i<8;i++){
+              newArr[i] = arr[i];
+            }
+            for(int i=0;i<8;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<endl;
+
+            //delection from front
+            cout<<"\ndelection in front"<<endl;
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=1;i<9;i++){
+              newArr[i-1] = arr[i];
+            }
+            for(int i=0;i<8;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<endl;
+            //delection from nth position
+            //for this example is am taking 4 as nth position
+            cout<<"\ndelection in nth postion (for this example i taken 4 as nth postion)"<<endl;
+            //here i am copping the element of previous array(arr) into new array(newArr)
+            for(int i=0;i<9;i++){
+              if(i<4-1){
+                newArr[i] = arr[i];
+              }else if(i>4-1){
+                newArr[i-1] = arr[i];
+              }
+            }
+            for(int i=0;i<8;i++){
+              cout<<newArr[i]<<" ";
+            }
+            cout<<"\n"<<endl;
+        }
+
+        //2.) Traveral Operation in Linear Array
+        void ArrayTraversal(){
+            //to showing delection i taken a int Array as example
+            cout<<"Traveral of Array"<<endl;
+            int arr[9] = {1,2,3,4,5,6,7,8,9};
+
+            for(int i=0;i<9;i++){
+              cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
+        int main() {
+          Insertion_in_Array();
+          Delection_in_Array();
+          ArrayTraversal();
+          return 0;
+        }
+
+output :- Enter data to insert in back : 12
+          1 2 3 4 5 6 7 8 9 12
+
+          insertion in front
+
+          Enter data to insert in front : 23
+          23 1 2 3 4 5 6 7 8 9
+
+          insertion in nth postion (for this example i taken 4 as nth postion)
+
+          Enter data to insert in nth position : 43
+          1 2 3 43 4 5 6 7 8 9
+
+          Array before any Deletion
+          1 2 3 4 5 6 7 8 9
+
+          delection in back
+          1 2 3 4 5 6 7 8
+
+          delection in front
+          2 3 4 5 6 7 8 9
+
+          delection in nth postion (for this example i taken 4 as nth postion)
+          1 2 3 5 6 7 8 9
+
+          Traveral of Array
+          1 2 3 4 5 6 7 8 9

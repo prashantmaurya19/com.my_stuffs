@@ -1,0 +1,9 @@
+1 : 8-puzzle problem without heuristic
+
+>> Blind search (uninformed)
+
+>> Breath first search
+
+>> time complexcity : O(b^d)
+
+>> 4 moves(up ,down ,left ,right);

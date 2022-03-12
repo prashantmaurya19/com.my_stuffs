@@ -1,0 +1,19 @@
+Searching 
+
+>> Uninformed searching:
+	>search without information 
+	>no knowledge
+	>time consuming  
+	>more Complexity (time ,space)
+	>dfs , bfs etc ..
+
+>> Informed searching:
+	>Search with information
+	>Use knowledge to find setps to solution
+	>Quich solution
+	>Less complexity (time , space)
+	>A* , Heuritic DFS , Best First Search 
+	>Heuritic means 'anumaan'
+	>..
+
+>>

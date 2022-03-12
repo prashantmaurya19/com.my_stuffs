@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+h1{
+    width: 100vw;
+    height: 10vh;
+    font-size: 8vh;    
+    background:linear-gradient(60deg,blue, skyblue 43%)
+}
+
+.btaker{
+    width: 100%;
+    height: 51px;
+    background: red;
+    z-index: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
+#bankBalance{
+    width: 70vw;
+    height: 80vh;
+    background-color: bisque;
+}
+
+#containBalanceElement{
+    width: 100%;
+    height: 100%;
+}

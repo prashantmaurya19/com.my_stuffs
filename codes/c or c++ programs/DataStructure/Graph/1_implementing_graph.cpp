@@ -11,7 +11,9 @@ class Graph{
             this->v = v;
             l = new list<int>[v];
         }
-         
+        Graph(){
+
+        }
         void addEdge(int x,int y){
             l[x].push_back(y);
             l[y].push_back(x);
@@ -36,7 +38,7 @@ int main(){
     g.addEdge(2,3);
     g.addEdge(1,2);
     g.printList();
-     
- 
+
+
     return 0;
 }

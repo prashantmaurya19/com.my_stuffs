@@ -1,0 +1,15 @@
+8-puzzle problem with heuristic(infomed search)
+
+>> first compare final result to current state
+
+>> find misplaced tiles
+
+>> move space to check any tile comes on a place
+
+>> if true then go for next misplaced tile  
+
+>> and it process will goes on like that untill you not get the final state
+
+>> ,,,
+
+>>

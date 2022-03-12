@@ -1,7 +1,7 @@
 SSSP using Breadth First search
 
 >> Breath First search:
-	1 >In it we create two arrays one is for visited vertexes and  second for distent array
+	1 >In it we create two arrays one is for visited vertexes and second for distent array
 	2 >In it traversal performed using a queue
 	3 >first we traverse all child of a node then we go for traversal of his child nodes
 	4 >

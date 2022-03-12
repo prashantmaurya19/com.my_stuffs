@@ -1,0 +1,12 @@
+Bidirectional search 
+
+>> two simultaneous search form on initial node to goal adn backward from 
+goal to inital , stoping when two meet .
+
+>> time complexity : 2(b^d\2)
+
+>> complete in breath first search 
+
+>> not in depth first search
+
+>>

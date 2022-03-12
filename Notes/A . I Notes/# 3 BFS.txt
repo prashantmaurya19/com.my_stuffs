@@ -1,0 +1,13 @@
+Breath First Search
+
+>> BFS:
+	>Uniformed Search techique
+	>FiFo(queue)
+	>Shollowest node
+	>Complete
+	>Optimal
+	>Time complexity:
+		>for competative : O(V + e)
+		>for in A i : O(b^d) ..
+
+>>

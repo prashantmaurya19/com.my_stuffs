@@ -1,26 +1,22 @@
 body{
-    height: 663px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg,red,pink);
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(45deg,white,red);
-    overflow: hidden;
 }
 
-.container{
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(0deg,skyblue,purple);
-    border-radius: 50%;
-    border: 20px solid skyblue;
-}
-
-.container::after{
-    content: "";
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    width: 100px;
-    height:100px;
-
+.settingContainer{
+    width: 80vw;
+    height: 80vh;
+    backdrop-filter: blur(2px);
+    border-radius: 4px;
+    outline: none;
+    font-size: large;
+    font-family: sans-serif;
+    background:none ;
+    box-shadow: 0 0 20px 5px rgb(0 0 0 / 21%);
 }

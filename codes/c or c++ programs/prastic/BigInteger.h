@@ -89,9 +89,7 @@ public:
 	}
 
 	void add(BigInteger integer){
-		// if(integer.isNegetive() && !negetive){
-		// 	sub(integer);
-		// }
+
 		int i = 0;
 		int j = 0;
 		int carry = 0;
@@ -213,7 +211,7 @@ public:
 					num_length = total.size();
 		}
 
-	void printbig(){
+	void print(){
 		if(negetive){
 			cout<<'-';
 		}
@@ -272,6 +270,11 @@ public:
 		BigInteger big(this->toString());
 		big.add(integer);
 		return big;
+	}
+
+	void operator=(string integer){
+		string s = integer;
+		this->init(s);
 	}
 
 	BigInteger operator*(const BigInteger integer){

@@ -9,6 +9,8 @@ from tkinter.colorchooser import askcolor
 import tkinter.font as tkf
 import os
 
+
+
 file_name = None # for file hendling
 issaved = True # for file hendling
 isopenedfile = False # for file hendling
@@ -104,19 +106,7 @@ def exit_window():
 		root.destroy()
 
 def about():
-	fmsg.showinfo('NoteMaker - Create Efficient notes','Developer name:- Prashant Maurya'
-													   '\nVersion :- 11.1.0\n\n\t'
-													   'there are some shorcuts\n\t'
-													   'Editor mode(on) :- startcode->enter\n\t'
-													   'Editor mode(off) :- .scq\n\t'
-													   'for getting tree like structure :- any_word: \n\t'
-													   'plese do not use multiple dots(....) In the starting of numbered line\n\t'
-													   'use it for eqiting from tree or numbered line\n\t'
-													   'for open cmd :- control+shift+a\n\t'
-													   '\n\t'
-													   'if you are not able to control skip over the word then \n\t'
-													   'just disable all lock keys disableing num lock is optional\n\t'
-													   '\nThanks To using this notemaker plese loving this.')
+	fmsg.showinfo('NoteMaker - Create Efficient notes','Developer name:- Prashant Maurya\nVersion :- 11.1.0')
 
 def Tabbing(arrow,n):
 	index = getIndex()
@@ -485,7 +475,7 @@ def setText_wrap():
 root = Tk()
 root.geometry(f"1000x500+190+100")
 root.title(file_name)
-root.iconbitmap(r".\nmico.ico")
+root.iconbitmap("nmico.ico")
 root.protocol("WM_DELETE_WINDOW", exit_window)
 wraps = IntVar()
 root.title('Untitled - NoteMaker')
@@ -502,10 +492,10 @@ m1.add_command(label='save file',command=Save_file)
 m1.add_command(label='close file',command=close_file)
 m1.add_separator()
 m1.add_command(label='Exit		',command=exit_window)
+menu.add_cascade(label='File',menu=m1)
 
 
 # creating submenu edit
-menu.add_cascade(label='File',menu=m1)
 m2 = Menu(menu,tearoff=0)
 m2.add_command(label='Font',command=change_font)
 m2.add_checkbutton(label='Word Wrap',onvalue=1, offvalue=0,variable=wraps,command=setText_wrap)

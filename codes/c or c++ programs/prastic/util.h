@@ -1,6 +1,6 @@
-//header file by prashant for his own use 
-//don't touch it 
-template<class T>
-T sum(T a,T b){
+//header file by prashant for his own use
+//don't touch it
+template<typename T>
+int add(T a,T b){
 	return a+b;
 }

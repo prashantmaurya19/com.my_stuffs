@@ -7,7 +7,6 @@ let h = new Date().getHours();
 let m = new Date().getMinutes();
 let s = new Date().getSeconds();
 let date = new Date();
-// console.log(date.getHours(),date.getMinutes(),date.getSeconds())
 
 update();
 

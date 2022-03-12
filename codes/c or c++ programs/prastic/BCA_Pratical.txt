@@ -1,0 +1,277 @@
+Q.1 ) Write a program to your name n number of times.
+code :- void printNameNTimes(int n){
+          while (n--) {
+            cout<<"prashant maurya"<<endl;
+          }
+        }
+
+Q.2 ) Write a program to calculate factorial of a number.
+code :- void factorial(int number){
+            long long int result = 1;
+            for(int i = 1;i<=number;i++){
+                result*=i;
+            }
+            cout<<result<<endl;
+        }
+
+Q.3 ) write a program to accept the information of a book such as book number, author of the book,
+     publisher and price and also display it.
+code:-  void bookInfo(){
+          vector<pair<string,string>> bookInformation;
+          bookInformation.push_back({"Enter Name of the Book : ","noname"});
+          bookInformation.push_back({"Enter Author of this Book : ","noname"});
+          bookInformation.push_back({"Enter Publisher of this Book : ","noname"});
+          bookInformation.push_back({"Enter Price of this Book : ","noname"});
+
+          for(pair<string,string> &field: bookInformation ){
+            cout<<field.first;
+            getline(cin,field.second);
+            cout<<endl;
+          }
+
+          for(auto field : bookInformation){
+            cout << field.first.substr(6,field.first.size())  << field.second <<endl;
+          }
+        }
+
+Q.4 ) Write a program to print address of variable with its value.
+code:- void print_Var_Address_and_Value(){
+          string str = "dummieValue";
+          cout<<"Address of Variable = "<<&str<<"\nValue of Variable = "<<str<<endl;
+       }
+
+Q.5 ) Write a program to add elements of two same size array and display it.
+code:- void add_Elements_of_Two_Array(int* a,int* b,int size){
+          for(int i = 0;i<size;i++){
+            cout<<(a[i]+b[i])<<", ";
+          }
+          cout<<endl;
+       }
+
+Q.6 ) Write a program FOR LINEAR ARRAY OPERATIONS (ANY THREE)
+code :- //Three Operations in Linear Array
+//1.) Insertion Operation in Linear Array
+void Insertion_in_Array(){
+    //to showing insertion i taken a int Array as example
+    cout<<"Array before any insertion"<<endl;
+    int arr[9] = {1,2,3,4,5,6,7,8,9};
+    for(int i=0;i<9;i++){
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    //insertion in back
+    cout<<"insertion in back"<<endl;
+    int newData;
+    cin>>newData;
+    int newArr[10];
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=0;i<9;i++){
+      newArr[i] = arr[i];
+    }
+    newArr[9] = newData;
+    for(int i=0;i<10;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<endl;
+
+    //insertion in front
+    cout<<"insertion in front"<<endl;
+    //i already decleared newArr and newData above
+    cin>>newData;
+    newArr[0] = newData;
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=1;i<10;i++){
+      newArr[i] = arr[i-1];
+    }
+    for(int i=0;i<10;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<endl;
+    //insertion in nth position
+    //for this example is am taking 4 as nth position
+    //i already decleared newArr and newData above
+    cout<<"insertion in nth postion (for this example i taken 4 as nth postion)"<<endl;
+    cin>>newData;
+    newArr[4-1] = newData;
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=0;i<10;i++){
+      if(i<4-1){
+        newArr[i] = arr[i];
+      }else if(i>4-1){
+        newArr[i] = arr[i-1];
+      }
+    }
+    for(int i=0;i<10;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<"\n"<<endl;
+}
+
+//2.) Deletion Operation in Linear Array
+void Delection_in_Array(){
+    //to showing delection i taken a int Array as example
+    cout<<"Array before any Deletion"<<endl;
+    int arr[9] = {1,2,3,4,5,6,7,8,9};
+
+    for(int i=0;i<9;i++){
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    //delection from back
+    cout<<"delection in back"<<endl;
+    int newArr[8];
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=0;i<8;i++){
+      newArr[i] = arr[i];
+    }
+    for(int i=0;i<8;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<endl;
+
+    //delection from front
+    cout<<"delection in front"<<endl;
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=1;i<9;i++){
+      newArr[i-1] = arr[i];
+    }
+    for(int i=0;i<8;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<endl;
+    //delection from nth position
+    //for this example is am taking 4 as nth position
+    cout<<"delection in nth postion (for this example i taken 4 as nth postion)"<<endl;
+    //here i am copping the element of previous array(arr) into new array(newArr)
+    for(int i=0;i<9;i++){
+      if(i<4-1){
+        newArr[i] = arr[i];
+      }else if(i>4-1){
+        newArr[i-1] = arr[i];
+      }
+    }
+    for(int i=0;i<8;i++){
+      cout<<newArr[i]<<" ";
+    }
+    cout<<"\n"<<endl;
+}
+
+//2.) Traveral Operation in Linear Array
+void ArrayTraversal(){
+    //to showing delection i taken a int Array as example
+    cout<<"Traveral of Array"<<endl;
+    int arr[9] = {1,2,3,4,5,6,7,8,9};
+
+    for(int i=0;i<9;i++){
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
+Q.7 ) Write a program FOR STACK OPERATIONS (ANY THREE)
+code :- Operations of Stack
+//! For Implemention of Stack i am Array !
+class myStack{
+private:
+  int* mainArr;
+  int length = 0;
+public:
+  myStack(){
+
+  }
+  //Push opertion of stack
+  void push(int newData){
+    int* newArr = new int[this->length+1];
+    for(int i=0;i<this->length;i++){
+      newArr[i] = this->mainArr[i];
+    }
+    newArr[this->length] = newData;
+    this->length++;
+    this->mainArr = newArr;
+  }
+
+  //pop operation of stack
+  int pop(){
+    int* newArr = new int[this->length-1];
+    int last = this->mainArr[this->length-1];
+    for(int i=0;i<this->length;i++){
+      newArr[i] = this->mainArr[i];
+    }
+    this->mainArr = newArr;
+    this->length--;
+    return last;
+  }
+
+  bool isEmpty(){
+    return this->length==0;
+  }
+
+  // peek operation of stack
+  int peek(){
+    return this->mainArr[this->length-1];
+  }
+
+  void print(){
+    for (int i = 0; i < this->length; i++) {
+      cout<<this->mainArr[i]<<" ";
+    }
+    cout<<endl;
+  }
+
+  int size(){
+      return this->length;
+  }
+};
+
+int main() {
+  myStack stack;
+  stack.push(1);
+  stack.push(2);
+  cout<<stack.pop()<<endl;
+  cout<<stack.isEmpty()<<endl;
+  cout<<stack.peek()<<endl;
+  stack.print();
+  return 0;
+}
+
+Q.8 ) Write a program TO FIND AN ELEMENT BY BINARY SEARCH IN LINEAR ARRAY.
+code :- int BinarySearch(int* arr,int data,int R,int L=0){
+            int mid = (L+R)/2;
+            if(arr[mid]==data){
+              return mid;
+            }
+            if(R-1==L){
+              return (arr[R]==data) ? R : -1;
+            }
+            if(arr[mid]>data){
+              BinarySearch(arr,data,mid-1,L);
+            }else if(arr[mid]<data){
+              BinarySearch(arr,data,R,mid+1);
+            }
+          }
+
+Q.9 ) write a program to find out the sum of two integer number using structure.
+code :-
+struct Integers{
+public:
+  int a,b,c;
+};
+
+void sum(Integers* value){
+  value->c = value->a+value->b;
+}
+
+
+Q.10 ) Write a program to reverse a linear array and display it.
+code :-
+void reverse(int* arr,int size){
+  int l =0 , r = size-1;
+  while(l<r){
+    int temp = arr[l];
+    arr[l] = arr[r];
+    arr[r] = temp;
+    l++;
+    r--;
+  }
+}
+the end

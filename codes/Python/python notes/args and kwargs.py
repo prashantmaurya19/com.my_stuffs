@@ -5,8 +5,8 @@ def prints(*args):
 	for e in args:
 		print(e)
 
-# pr = ["prahn","nishnat","nis","man"]
-# prints(*pr)
+pr = ["prahn","nishnat","nis","man"]
+prints(*pr)
 
 # kwargs -----> it is pass as dict in function
 def pr(**kwargs):

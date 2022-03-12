@@ -1,0 +1,27 @@
+Q.9 ) write a program to find out the sum of two integer number using structure.
+
+code :- #include<bits/stdc++.h>
+        using namespace std;
+
+        struct Integers{
+        public:
+          int a,b,c;
+        };
+
+        void sum(Integers* value){
+          value->c = value->a+value->b;
+          cout<<"\nSum of "<<value->a<<" and "<<value->b<<" is "<<value->c<<endl;
+        }
+
+        int main() {
+          struct Integers i;
+          cout<<"Enter number :";
+          cin>>i.a>>i.b;
+
+          sum(&i);
+          return 0;
+        }
+
+output :- Enter number :89 92
+
+          Sum of 89 and 92 is 181

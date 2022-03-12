@@ -1,0 +1,32 @@
+Q.8 ) Write a program TO FIND AN ELEMENT BY BINARY SEARCH IN LINEAR ARRAY.
+
+code :- #include<bits/stdc++.h>
+        using namespace std;
+
+        int BinarySearch(int* arr,int data,int R,int L=0){
+                    int mid = (L+R)/2;
+                    if(arr[mid]==data){
+                      return mid;
+                    }
+                    if(R-1==L){
+                      return (arr[R]==data) ? R : -1;
+                    }
+                    if(arr[mid]>data){
+                      BinarySearch(arr,data,mid-1,L);
+                    }else if(arr[mid]<data){
+                      BinarySearch(arr,data,R,mid+1);
+                    }
+                  }
+
+        int main() {
+          int a[9] = {1,2,3,4,5,6,7,8,9};
+          for(int i =0;i<9;i++){
+            cout<<a[i]<<" ";
+          }
+          cout<<"\nThe index of 7 in the Array is "<<BinarySearch(a,7,9)<<endl;
+
+          return 0;
+        }
+
+output :- 1 2 3 4 5 6 7 8 9
+         The index of 7 in the Array is 6

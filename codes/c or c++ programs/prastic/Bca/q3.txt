@@ -1,0 +1,41 @@
+Q.3 ) write a program to accept the information of a book such as book number, author of the book,
+     publisher and price and also display it.
+
+code :- #include<bits/stdc++.h>
+        using namespace std;
+
+        void bookInfo(){
+          vector<pair<string,string>> bookInformation;
+          bookInformation.push_back({"Enter Name of the Book : ","noname"});
+          bookInformation.push_back({"Enter Author of this Book : ","noname"});
+          bookInformation.push_back({"Enter Publisher of this Book : ","noname"});
+          bookInformation.push_back({"Enter Price of this Book : ","noname"});
+
+          for(pair<string,string> &field: bookInformation ){
+            cout<<field.first;
+            getline(cin,field.second);
+            cout<<endl;
+          }
+
+          for(auto field : bookInformation){
+            cout << field.first.substr(6,field.first.size())  << field.second <<endl;
+          }
+        }
+
+        int main() {
+          bookInfo();
+          return 0;
+        }
+
+output :- Enter Name of the Book : Teaching Lengeds of the World
+
+          Enter Author of this Book : A . M . Samir
+
+          Enter Publisher of this Book : AmarSaty Publishers
+
+          Enter Price of this Book : 300RS
+
+          Name of the Book : Teaching Lengeds of the World
+          Author of this Book : A . M . Samir
+          Publisher of this Book : AmarSaty Publishers
+          Price of this Book : 300RS

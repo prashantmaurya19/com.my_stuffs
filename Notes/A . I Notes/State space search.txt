@@ -1,0 +1,18 @@
+State space search 
+
+>> it type of representation of our problem precisely
+
+>> it is a tuple has following things :
+	>{
+	> s : total number of state:
+		>it some states 'that is':
+			>Start state
+			>Intermmideate state
+			>Goal state..
+	>a : all posible actions,
+	>action (s) : the action you choose of the current state form all the posible actions.
+	>Result(s , a) : what state we get after the applying a action that is called resultent state.
+	>  cost(s , a) : it can be any gerenal constant .
+	>}..
+
+>>

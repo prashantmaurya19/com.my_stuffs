@@ -1,0 +1,33 @@
+{
+    "javascripts_scripts":{
+        "paths":[],
+        "usage":"add some new script in application to change the behavior",
+        "1":"scripts executs squentialy"    
+    },
+    "css_sripts":{
+        "paths":[],
+        "usage":"add some new script in application to change the style",
+        "1":"scripts executs squentialy"    
+    },
+    "editorOption":{
+        "language": "javascript",
+        "lineNumbers": "on", 
+        "minimap" : {"enabled" : false},
+        "automaticLayout": true,
+        "padding":{
+            "bottom": 0,
+            "top": 0
+        } ,
+        "roundedSelection": true,
+        "scrollBeyondLastLine": true,
+        "readOnly": false,
+        "theme": "vs-dark"
+    },
+    "active_Work_Information":{
+        "files":[],
+        "currentTheme":""
+    },
+    "themes_Information":{
+        "themes":[]
+    }
+}

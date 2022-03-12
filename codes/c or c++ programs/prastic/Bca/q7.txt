@@ -1,0 +1,80 @@
+Q.7 ) Write a program FOR STACK OPERATIONS (ANY THREE)
+
+code:- #include<bits/stdc++.h>
+        using namespace std;
+        //! For Implemention of Stack i am Array !
+        class myStack{
+        private:
+          int* mainArr;
+          int length = 0;
+        public:
+          myStack(){
+
+          }
+          //Push opertion of stack
+          void push(int newData){
+            int* newArr = new int[this->length+1];
+            for(int i=0;i<this->length;i++){
+              newArr[i] = this->mainArr[i];
+            }
+            newArr[this->length] = newData;
+            this->length++;
+            this->mainArr = newArr;
+          }
+
+          //pop operation of stack
+          int pop(){
+            int* newArr = new int[this->length-1];
+            int last = this->mainArr[this->length-1];
+            for(int i=0;i<this->length;i++){
+              newArr[i] = this->mainArr[i];
+            }
+            this->mainArr = newArr;
+            this->length--;
+            return last;
+          }
+
+          bool isEmpty(){
+            return this->length==0;
+          }
+
+          // peek operation of stack
+          int peek(){
+            return this->mainArr[this->length-1];
+          }
+
+          void print(){
+            for (int i = 0; i < this->length; i++) {
+              cout<<this->mainArr[i]<<" ";
+            }
+            cout<<endl;
+          }
+
+          int size(){
+              return this->length;
+          }
+        };
+
+        int main() {
+          myStack stack;
+          stack.push(1);
+          stack.push(2);
+          stack.push(3);
+          stack.push(4);
+          stack.push(5);
+          cout<<"\nPopped Element : "<<stack.pop()<<endl;
+          cout<<"\nStack is Empty : "<<stack.isEmpty()<<endl;
+          cout<<"\nTop Element in Stack : "<<stack.peek()<<endl;
+          cout<<"\nTraverasing Stack"<<endl;
+          stack.print();
+          return 0;
+        }
+
+output :- Popped Element : 5
+
+          Stack is Empty : 0
+
+          Top Element in Stack : 4
+
+          Traverasing Stack
+          1 2 3 4

@@ -45,13 +45,13 @@ h1{
 
 .star{
     position: absolute;
-    top: 200px;
-    left: 100px;
+    /* top: 200px;
+    left: 100px; */
     width: 5px;
-    height: 40px;
+    height: 5px;
     border-radius: 20px;
-    background: linear-gradient(white,transparent);
-    animation: animat .5s linear infinite;
+    background: white;
+    animation: star 1s ease-in-out infinite;
 }
 @keyframes animat{
     0%{
@@ -60,21 +60,19 @@ h1{
     50%{
         height: 40px;
         transform: translate(0,0);
-        /* transform: translate(0,-40px); */
+        transform: translate(0,-40px);
     }
     100%{
         /* height: 30px; */
-        transform: translate(0,50px);
+        transform: translate(0,20px);
     }
 }
 
-@keyframes animate{
+@keyframes star{
     0%,100%{
-        height: 0px;
-        width: 0px;
+        box-shadow: 0 0 0px 0px white;
     }
     50%{
-        height: 10px;
-        width: 10px;
+        box-shadow: 0 0 10px 10px white;
     }
 }
