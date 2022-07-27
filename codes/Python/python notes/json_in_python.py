@@ -13,5 +13,5 @@ data2 = {
 
 json = json.dumps(data2)
 
-print(type(json))
+print(json)
 

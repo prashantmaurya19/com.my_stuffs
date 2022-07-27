@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFJS</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./testingModel/index.css">
+</head>
+<body>
+    <div id="root" class="align toplevel">
+        <div class="visual borders" id="vis"></div>
+        <div class="controller">
+            <label class="textstyle" >start : <input type="text" id="srange"></label>
+            <label class="textstyle" >end : <input type="text" id="erange"></label>
+            <label class="textstyle" >data : <input type="text" id="dataset"></label>
+            <button id="start" class="btn borders textstyle">start</button>
+        </div>
+        <div class="state textstyle align incompleted">
+            state : resources is not loaded yet! 
+        </div>
+    </div>
+</body>
+<script src="./Utils/chart.min.js"></script>
+<script src="./Utils/tensorflow.min.js"></script>
+<script src="./Utils/NeuralNetwork.js"></script>
+<script src="./Utils/collector.js"></script>
+<script src="./Utils/LineChart.js"></script>
+<script src="./testingModel/loader.js"></script>
+<script src="./testingModel/index.js"></script>
+</html>

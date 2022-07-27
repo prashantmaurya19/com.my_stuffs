@@ -102,6 +102,16 @@ public:
     }
     return result;
   }
+  
+  Matrix<T> transpose(){
+    Matrix<T> result(this->getColumnLength(),this->getRowLength());
+    for(int i = 0; i<this->getRowLength();i++){
+      for(int j = 0; j<this->getColumnLength();j++){
+        result.replace(j,i,this->get(i,j));
+      }
+    }
+    return result;
+  }
 
   T get(int i,int j){
     return this->matrix[i][j];
@@ -193,28 +203,26 @@ public:
 };
 
 int main(){
-  Matrix<int> b,n,m,m1;
-  m1 = {
-        {0,7,8},
-        {-5,0,10},
-        {8,-6,0}
-       };
-  b={
-    {2},
-    {-2},
-    {3}
-  };
-  m = {
-        {1,-2,3},
-        {-4,2,5}
-      };
+  Matrix<int> n,a,b,c;
   n={
-      {2,3},
-      {4,5},
-      {2,1}
-    };
-  cout<<n.transpose()<<m<<m1<<endl;
-  cout<<(n*m)<<endl;
-  cout<<(m1*b)<<endl;
+      {1,0},
+      {1,1},
+      {1,0}
+    },
+  a = {
+    {0,1,0},
+    {1,1,1}
+  },
+  b={
+      {0,1},
+      {1,1},
+      {0,1}
+    },
+  c = {
+    {1,1,1},
+    {0,1,0}
+  };
+
+  cout<<n.transpose()<<a.transpose()<<b.transpose()<<c.transpose();
   return 0;
  }

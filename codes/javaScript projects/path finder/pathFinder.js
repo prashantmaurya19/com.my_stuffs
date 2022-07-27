@@ -34,18 +34,23 @@ function fillBoard(childrens) {
 }
 
 function create2dArray(x, y) {
-    let array = new Array(new Array());
+    let array = [];
     for (let i = 0; i < y; i++) {
+        array.push(new Array());
         for (let j = 0; j < x; j++) {
             let child = document.createElement("a");
             child.classList.add('node');
-            child.style.background = white;
             container.appendChild(child);
             child.id = i + "," + j;
-            child.nodes = new Array();
-            array[i][j] = child;
+            // child.nodes = new Array();
+            let value = parseInt(Math.random()*2);
+            let condition = (i+j)%2==0;
+            if(value==1 && condition){
+                child.style.background = blue;
+                // child.style
+            }
+            array[i][j] = {element:child,i,j,value : condition ? value : 0};
         }
-        array.push(new Array());
     }
     return array;
 }

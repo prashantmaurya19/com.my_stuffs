@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFJS</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./trainingModel/index.css">
+</head>
+<body>
+    <div id="root" class="toplevel">
+        <div class="status align">
+            <span id="ind" class="borders spans textstyle">none</span>
+            <span id="whole" class="borders spans textstyle">none</span>
+        </div>
+        <div class="align controler">
+            <button id="start" class="btn borders">start</button>
+            <button id="end" class="btn borders">end</button>
+            <button id="save" class="btn borders">save</button>
+            <button id="load" class="btn borders">load</button>
+        </div>
+        <div class="state textstyle align incompleted">
+            state : resources is not loaded yet! 
+        </div>
+    </div>
+</body>
+<script src="./Utils/tensorflow.min.js"></script>
+<script src="./Utils/collector.js"></script>
+<script src="./trainingModel/dist/tf-backend-wasm.min.js"></script>
+<script src="./Utils/NeuralNetwork.js"></script>
+<script src="./trainingModel/loader.js"></script>
+<script src="./trainingModel/index.js"></script>
+</html>

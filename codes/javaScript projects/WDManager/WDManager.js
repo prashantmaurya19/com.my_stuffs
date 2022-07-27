@@ -1,7 +1,6 @@
 class BlanceTaker{
     constructor(){
         return this.combineElement();
-
     }
 
     combineElement(){
@@ -35,6 +34,8 @@ class BlanceTaker{
 
 class CreateBlanceTaker{
     constructor(element){
+        let addBtn = document.createElement("button");
+        addbtnc
         element.append(new BlanceTaker());
     }
 }

@@ -1,0 +1,18 @@
+{
+  "name": "node_module",
+  "version": "1.0.0",
+  "description": "local lib dir for all my non-primitive modules",
+  "main": "none",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Prashant Maurya",
+  "license": "ISC"
+}

@@ -11,7 +11,6 @@ blade.addEventListener('dragover',(e)=>{
 
 blade.addEventListener('drop',(e)=>{
     blade.style.backgroundImage = currimg;
-    console.log(currimg);
 })
 
 let imgs = document.querySelectorAll('.carate img');
@@ -24,7 +23,7 @@ function dragStart(e){
 }
 
 function dragEnd(e){
-    currimg = "";
+    // currimg = "";
 }
 
 document.querySelector("body").addEventListener('keydown',(e)=>{

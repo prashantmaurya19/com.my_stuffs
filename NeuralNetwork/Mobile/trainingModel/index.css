@@ -1,0 +1,30 @@
+.toplevel{
+    background-color: rgb(10, 0, 7);
+}
+
+.status{
+    width: 90%;
+    height: 40%;
+}
+
+.status .spans{
+    margin-top: 1%;
+    width: 100%;
+    font-size: 3vmin;
+    color: white;
+}
+
+.status .spans:first-child{
+    height: 40%;
+}
+.status .spans:last-child{
+    height: 60%;
+}
+
+.controler{
+    width: 100%;
+    height: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}

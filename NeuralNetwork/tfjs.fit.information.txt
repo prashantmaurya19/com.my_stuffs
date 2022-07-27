@@ -1,0 +1,15 @@
+batchSize (number) Number of samples per gradient update. If unspecified, it will default to 32.
+epochs (number) Integer number of times to iterate over the training data arrays.
+verbose (ModelLoggingVerbosity) Verbosity level.
+Expected to be 0, 1, or 2. Default: 1.
+
+0 - No printed message during fit() call. 1 - In Node.js (tfjs-node), prints the progress bar, together with real-time updates of loss and metric values and training speed. In the browser: no action. This is the default. 2 - Not implemented yet.
+
+callbacks (BaseCallback[]|CustomCallbackArgs|CustomCallbackArgs[]) List of callbacks to be called during training. Can have one or more of the following callbacks:
+onTrainBegin(logs): called when training starts.
+onTrainEnd(logs): called when training ends.
+onEpochBegin(epoch, logs): called at the start of every epoch.
+onEpochEnd(epoch, logs): called at the end of every epoch.
+onBatchBegin(batch, logs): called at the start of every batch.
+onBatchEnd(batch, logs): called at the end of every batch.
+onYield(epoch, batch, logs): called every yieldEvery milliseconds with the current epoch, batch and logs. The logs are the same as in onBatchEnd(). Note that onYield can skip batches or epochs. See also docs for yieldEvery below.
